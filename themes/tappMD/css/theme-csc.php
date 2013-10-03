@@ -1,9 +1,10 @@
 <?php
 
-//Display Login Image With No Link
+// Use your own external URL logo link
 
+$homeURL = esc_url( home_url( '/' ) );
 function wpc_url_login(){
-	return "#";
+	return $homeURL; // Main URL
 }
 add_filter('login_headerurl', 'wpc_url_login');
 
