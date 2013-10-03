@@ -1,0 +1,654 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator:  <pavelyakov@gmail.com>\n"
+"Language-Team:  <pavelyakov@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ../partials\n"
+"X-Poedit-SearchPath-2: ../functions\n"
+"X-Poedit-SearchPath-3: ../functions/includes\n"
+"X-Poedit-SearchPath-4: ../functions/includes/widgets\n"
+
+#. Text in function
+#: ../404.php:150 ../search.php:193 ../functions/includes/post_info.php:9
+#: ../functions/includes/widgets/magazine_top_reviews.php:147
+#: ../functions/includes/widgets/widget_top_reviews.php:119
+msgid "%2$s"
+msgstr ""
+
+#. Text in echo
+#: ../404.php:101
+msgid "404 error, couldn't find the content you were looking for."
+msgstr ""
+
+#. Text in function
+#: ../404.php:156 ../search.php:199
+msgid "<span class=\"%1$s\">Tagged</span> %2$s"
+msgstr ""
+
+#. Text in echo
+#: ../404.php:97
+msgid "Oops ! 404 !"
+msgstr ""
+
+#. Text in echo
+#: ../404.php:117 ../search.php:160
+msgid "Please check out other posts:"
+msgstr ""
+
+#. Text in echo
+#: ../archive.php:39
+msgid "Blog Archives"
+msgstr ""
+
+#. Text in function
+#: ../archive.php:33
+msgid "Daily Archives : <span>%s</span>"
+msgstr ""
+
+#. Text in function
+#: ../archive.php:35
+msgid "Monthly Archives : <span>%s</span>"
+msgstr ""
+
+#. Text in function
+#: ../archive.php:37
+msgid "Yearly Archives : <span>%s</span>"
+msgstr ""
+
+#. Text in function
+#: ../author.php:29
+msgid "Author Archives : %s"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:68
+msgid "% Comments"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:28
+msgid "%1$s"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:23
+msgid "%s <i class=\"icon-comment-alt\"></i>"
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:108 ../comments-temp.php:115 ../comments-temp.php:126
+msgid "<i class=\\\"icon-asterisk\\\"></i>"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:73
+msgid "<span>&laquo;</span> Previous"
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:24
+msgid "Author <i class=\"icon-certificate\"></i>"
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:152
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:115
+msgid "Email"
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:108 ../partials/content-contact.php:161
+msgid "First Name"
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:111 ../partials/content-contact.php:164
+msgid "Last Name"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:90
+msgid "Leave a Comment"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:90
+msgid "Leave a Comment to %s"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:102
+msgid "Log out of this account"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:102
+msgid "Logged in as %1$s. %2$sLog out &raquo;%3$s"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:73
+msgid "Next <span>&raquo;</span>"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:68
+msgid "No Comments"
+msgstr ""
+
+#. Text in function
+#: ../comments-temp.php:68
+msgid "One Comment"
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:128
+msgid "Submit Comment"
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:118
+msgid "Website"
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:34 ../functions/theme-set.php:86
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. Text in echo
+#: ../comments-temp.php:126 ../partials/content-contact.php:175
+msgid "Your message"
+msgstr ""
+
+#. Text in function
+#: ../header.php:24
+msgid "Page %s"
+msgstr ""
+
+#. Text in echo
+#: ../header.php:208
+msgid "Search..."
+msgstr ""
+
+#. Text in function
+#: ../search.php:141 ../partials/content-page.php:107
+#: ../partials/content-page-full.php:31
+#: ../partials/content-page-sitemap.php:67 ../functions/theme-set.php:54
+#: ../functions/theme-set.php:82 ../functions/includes/post_info.php:
+msgid "Edit"
+msgstr ""
+
+#. Text in echo
+#: ../search.php:155 ../functions/includes/breadcrumbs.php:1
+msgid "Not Found"
+msgstr ""
+
+#. Text in echo
+#: ../search.php:28
+msgid "Search Results for &ldquo;"
+msgstr ""
+
+#. Text in echo
+#: ../search.php:156
+msgid "Sorry, but the requested resource was not found on this site."
+msgstr ""
+
+#. Text in function
+#: ../partials/content.php:41 ../partials/content-audio.php:106
+#: ../partials/content-gallery.php:80 ../partials/content-image.php:42
+#: ../partials/content-single.php:292 ../partials/content-video.php:38
+msgid "Permalink to %s"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content.php:68 ../partials/content-aside.php:65
+#: ../partials/content-audio.php:133 ../partials/content-gallery.php:107
+#: ../partials/content-image.php:69 ../partials/content-video.php:65
+#: ../functions/includes/widgets/magazine_1column.php:160
+#: ../functions/includes/widgets/magazine_1column_and_slider.php:185
+#: ../functions/includes/widgets/magazine_1column_and_small.php:138
+#: ../functions/includes/widgets/magazine_2column.php:336
+#: ../functions/includes/widgets/magazine_bignews.php:156
+#: ../functions/includes/widgets/magazine_slider_post.php:163
+#: ../functions/includes/widgets/magazine_video_home.php:151
+msgid "Read More "
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-contact.php:206
+msgid "Contact information"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-contact.php:150
+msgid "Send us mail"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-contact.php:192
+msgid "Submit message"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-contact.php:168
+msgid "Your email"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-contact.php:171
+msgid "Your phone"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-contact.php:189
+msgid "send message..."
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-page-sitemap.php:62
+msgid "Authors"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-page-sitemap.php:45
+msgid "Categories"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-page-sitemap.php:36
+msgid "Pages"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-page-sitemap.php:50
+msgid "Tags"
+msgstr ""
+
+#. Text in echo
+msgid "Sorry, no portfolio entries for while."
+msgstr ""
+
+#. Text in function
+#: ../partials/content-single.php:458
+msgid "Pages : &nbsp;"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-single-portfolio.php:180
+#: ../partials/content-single-portfolio-ajax.php:189
+msgid "Client"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-single-portfolio.php:188
+#: ../partials/content-single-portfolio-ajax.php:197
+msgid "Skills"
+msgstr ""
+
+#. Text in echo
+#: ../partials/content-single-portfolio.php:192
+#: ../partials/content-single-portfolio-ajax.php:201
+msgid "visit site"
+msgstr ""
+
+#. Text in echo
+#: ../functions/meta-options.php:1216
+msgid "Social Networking"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "Add New Category"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "Add New Portfolio Item"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "All Categories"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:99 ../functions/slider-csc.php:1
+msgid "Author"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:99 ../functions/slider-csc.php:1
+msgid "Date"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:99 ../functions/slider-csc.php:1
+msgid "Description"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "Edit Categories"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "New Category Name"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "New Portfolio Item"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "No Portfolio Items found"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "No Portfolio Items found in Trash"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:99 ../functions/slider-csc.php:1
+msgid "None"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "Parent Category"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "Search Portfolio Items"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "Search Types"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:99 ../functions/slider-csc.php:1
+msgid "Thumbnail"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:99
+msgid "Title"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "Update Category"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "View Portfolio Item"
+msgstr ""
+
+#. Text in function
+#: ../functions/portfolio-csc.php:1
+msgid "portfolio"
+msgstr ""
+
+#. Text in function
+#: ../functions/previous-and-next-post.php:1
+msgid "First Post"
+msgstr ""
+
+#. Text in function
+#: ../functions/previous-and-next-post.php:1
+msgid "Last Post"
+msgstr ""
+
+#. Text in function
+#: ../functions/previous-and-next-post.php:1
+msgid "Next Post"
+msgstr ""
+
+#. Text in function
+#: ../functions/previous-and-next-post.php:1
+msgid "Previous Post"
+msgstr ""
+
+#. Text in function
+#: ../functions/previous-and-next-post.php:1
+msgid "Use commas instead of %s to separate excluded categories."
+msgstr ""
+
+#. Text in function
+#: ../functions/slider-csc.php:1
+msgid "Add New Slider Item"
+msgstr ""
+
+#. Text in function
+#: ../functions/slider-csc.php:1
+msgid "Edit Slider Item"
+msgstr ""
+
+#. Text in function
+#: ../functions/slider-csc.php:1
+msgid "New Slider Item"
+msgstr ""
+
+#. Text in function
+#: ../functions/slider-csc.php:1
+msgid "No Slider Items found"
+msgstr ""
+
+#. Text in function
+#: ../functions/slider-csc.php:1
+msgid "No Slider Items found in Trash"
+msgstr ""
+
+#. Text in function
+#: ../functions/slider-csc.php:1
+msgid "Search Slider Items"
+msgstr ""
+
+#. Text in function
+#: ../functions/slider-csc.php:1
+msgid "View Slider Item"
+msgstr ""
+
+#. Text in function
+#: ../functions/theme-csc.php:1
+msgid "You can use WP menu builder to build menus"
+msgstr ""
+
+#. Text in function
+#: ../functions/theme-set.php:63
+msgid "%1$s at %2$s"
+msgstr ""
+
+#. Text in function
+#: ../functions/theme-set.php:63
+msgid "%1$s on %2$s <span class=\"says\">said:</span>"
+msgstr ""
+
+#. Text in function
+#: ../functions/theme-set.php:99
+msgid ""
+"<span class=\"sep\">&nbsp;&nbsp; <i class=\"icon-user\"></i>  Posted </"
+"span><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class="
+"\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel="
+"\"author\">%7$s</a></span> &nbsp;&nbsp; <i class=\"icon-folder-close\"></i>  "
+"</span>"
+msgstr ""
+
+#. Text in function
+#: ../functions/theme-set.php:99
+msgid ""
+"<span class=\"sep\">Posted </span><span class=\"by-author\"> <span class="
+"\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href="
+"\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#. Text in function
+#: ../functions/theme-set.php:1
+msgid "About the author &nbsp;&frasl;&nbsp;<span>"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:649
+msgid "Dashboard"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:660
+#: ../functions/includes/widgets/widget_login.php:1
+msgid "Login"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:651
+msgid "Logout"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:659
+msgid "Password"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:54
+msgid "Pingback:"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:662
+msgid "Remember Me"
+msgstr ""
+
+#. Text in function
+#: ../functions/theme-set.php:95
+msgid "Reply <span>&darr;</span>"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:658
+msgid "Username"
+msgstr ""
+
+#. Text in function
+#: ../functions/theme-set.php:99
+msgid "View all posts by %s"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:647
+msgid "Welcome"
+msgstr ""
+
+#. Text in echo
+#: ../functions/theme-set.php:650
+msgid "Your Profile"
+msgstr ""
+
+#. Text in function
+#: ../functions/includes/breadcrumbs.php:1
+msgid "Home"
+msgstr ""
+
+#. Text in function
+#: ../functions/includes/breadcrumbs.php:1
+msgid "page "
+msgstr ""
+
+#. Text in function
+#: ../functions/includes/post_info.php:15
+msgid ""
+"<span class=\"%1$s\">&nbsp;&nbsp; <i class=\"icon-tags\"></i> </span> %2$s"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/related.php:31
+msgid "Related Posts"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/magazine_1column.php:237
+#: ../functions/includes/widgets/magazine_1column_and_slider.php:307
+#: ../functions/includes/widgets/magazine_1column_and_small.php:219
+#: ../functions/includes/widgets/magazine_2column.php:430
+#: ../functions/includes/widgets/magazine_2column.php:471
+#: ../functions/includes/widgets/magazine_2column_small.php:385
+#: ../functions/includes/widgets/magazine_2column_small.php:423
+#: ../functions/includes/widgets/magazine_bignews.php:202
+#: ../functions/includes/widgets/magazine_carousel.php:168
+#: ../functions/includes/widgets/magazine_latest_images.php:145
+#: ../functions/includes/widgets/magazine_slider_post.php:232
+#: ../functions/includes/widgets/magazine_top_reviews.php:207
+#: ../functions/includes/widgets/magazine_video_home.php:236
+#: ../functions/includes/widgets/widget_1col_post.php:178
+#: ../functions/includes/widgets/widget_1col_slider.php:225
+msgid "Widget Color :"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/magazine_latest_images.php:153
+msgid "Number of Item:"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/magazine_top_reviews.php:143
+#: ../functions/includes/widgets/magazine_top_reviews.php:147
+#: ../functions/includes/widgets/widget_top_reviews.php:115
+#: ../functions/includes/widgets/widget_top_reviews.php:119
+msgid "In Category : "
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/widget_counter.php:88
+msgid "Fans"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/widget_counter.php:79
+#: ../functions/includes/widgets/widget_counter.php:115
+msgid "Followers"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/widget_counter.php:124
+msgid "Subscribe to RSS Feed"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/widget_counter.php:97
+#: ../functions/includes/widgets/widget_counter.php:106
+msgid "Subscribers"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/widget_flickr.php:106
+msgid "Number of Photos:"
+msgstr ""
+
+#. Text in echo
+#: ../functions/includes/widgets/widget_flickr.php:111
+msgid "Photostream : "
+msgstr ""
