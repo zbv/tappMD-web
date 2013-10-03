@@ -1,5 +1,18 @@
 <?php
 
+
+// Custom WordPress Admin Color Scheme
+function admin_css() {
+	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin.css' );
+}
+add_action('admin_print_styles', 'admin_css' );
+
+// Custom WordPress Login Screen
+function login_css() {
+	wp_enqueue_style( 'login_css', get_template_directory_uri() . '/css/login.css' );
+}
+add_action('login_head', 'login_css');
+
 function csc_check_WP_version(){
 global $wp_version, $load_msg;
 	if (version_compare($wp_version,"3.4.1","<"))
@@ -572,18 +585,6 @@ jQuery('#<?php echo $themename; ?>-csc_query_set_2-category_page_2').click(funct
 	
 });
 </script>
-
-// Custom WordPress Admin Color Scheme
-function admin_css() {
-	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin.css' );
-}
-add_action('admin_print_styles', 'admin_css' );
-
-// Custom WordPress Login Screen
-function login_css() {
-	wp_enqueue_style( 'login_css', get_template_directory_uri() . '/css/login.css' );
-}
-add_action('login_head', 'login_css');
 
 <?php }
 ?>
