@@ -1,0 +1,755 @@
+/***** Social link*****/
+
+ul.socicon-2,ul.socicon li {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+ul.socicon-2 li,ul.socicon li{
+	float: left;
+	margin-right: 0px;
+	margin-bottom:0px;
+	padding: 0px;
+    display:block;
+	width: auto;
+}		
+ul.socicon-2 li a, ul.socicon li a, a.soc-follow {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	margin-right: 2px;
+	margin-bottom:2px;
+	text-indent: -9999px;
+	-webkit-transition: all 0.3s ease 0s;
+     -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+       -o-transition: all 0.3s ease 0s;
+          transition: all 0.3s ease 0s;
+}	
+
+a.soc-follow.apple {
+	background: url(../images/social/apple.png) no-repeat 0 -40px;
+}
+a.soc-follow.apple:hover {
+	background-color: #606060;
+}
+a.soc-follow.blogger {
+	background: url(../images/social/blogger.png) no-repeat 0 -40px;
+}
+a.soc-follow.blogger:hover {
+	background-color: #fb913f;
+}
+a.soc-follow.cargo {
+	background: url(../images/social/cargo.png) no-repeat 0 -40px;
+}
+a.soc-follow.cargo:hover {
+	background-color: #00c462;
+}
+a.soc-follow.delicious {
+	background: url(../images/social/delicious.png) no-repeat 0 -40px;
+}
+a.soc-follow.delicious:hover {
+	background-color: #3274d1;
+}
+a.soc-follow.deviantart {
+	background: url(../images/social/deviantart.png) no-repeat 0 -40px;
+}
+a.soc-follow.deviantart:hover {
+	background-color: #d0de21;
+}
+a.soc-follow.digg {
+	background: url(../images/social/digg.png) no-repeat 0 -40px;
+}
+a.soc-follow.digg:hover {
+	background-color: #2882c6;
+}
+a.soc-follow.dopplr {
+	background: url(../images/social/dopplr.png) no-repeat 0 -40px;
+}
+a.soc-follow.dopplr:hover {
+	background-color: #99cc66;
+}
+a.soc-follow.dribbble {
+	background: url(../images/social/dribbble.png) no-repeat 0 -40px;
+}
+a.soc-follow.dribbble:hover {
+	background-color: #ef5b92;
+}
+a.soc-follow.ember {
+	background: url(../images/social/ember.png) no-repeat 0 -40px;
+}
+a.soc-follow.ember:hover {
+	background-color: #fb9d00;
+}
+a.soc-follow.evernote {
+	background: url(../images/social/evernote.png) no-repeat 0 -40px;
+}
+a.soc-follow.evernote:hover {
+	background-color: #77ba2f;
+}
+a.soc-follow.facebook {
+	background: url(../images/social/facebook.png) no-repeat 0 -40px;
+	background-color: #3b5998;
+}
+a.soc-follow.facebook:hover{
+	background-color: #3b5998;
+}
+a.soc-follow.flickrs {
+	background: url(../images/social/flickr.png) no-repeat 0 -40px;
+}
+a.soc-follow.flickrs:hover {
+	background-color: #f1628b;
+}
+a.soc-follow.forrst {
+	background: url(../images/social/forrst.png) no-repeat 0 -40px;
+}
+a.soc-follow.forrst:hover {
+	background-color: #5b9a68;
+}
+a.soc-follow.github {
+	background: url(../images/social/github.png) no-repeat 0 -40px;
+}
+a.soc-follow.github:hover {
+	background-color: #7292a2;
+}
+a.soc-follow.google {
+	background: url(../images/social/google.png) no-repeat 0 -40px;
+	background-color: #dd4b39;
+}
+a.soc-follow.google:hover {
+	background-color: #dd4b39;
+}
+a.soc-follow.googleplus {
+	background: url(../images/social/googleplus.png) no-repeat 0 -40px;
+	background-color: #d94a39;
+}
+a.soc-follow.googleplus:hover {
+	background-color: #d94a39;
+}
+a.soc-follow.gowalla {
+	background: url(../images/social/gowalla.png) no-repeat 0 -40px;
+}
+a.soc-follow.gowalla:hover {
+	background-color: #ff920d;
+}
+a.soc-follow.grooveshark {
+	background: url(../images/social/grooveshark.png) no-repeat 0 -40px;
+}
+a.soc-follow.grooveshark:hover {
+	background-color: #f88e00;
+}
+a.soc-follow.html5 {
+	background: url(../images/social/html5.png) no-repeat 0 -40px;
+}
+a.soc-follow.html5:hover {
+	background-color: #f3642c;
+}
+a.soc-follow.icloud {
+	background: url(../images/social/icloud.png) no-repeat 0 -40px;
+}
+a.soc-follow.icloud:hover {
+	background-color: #fb913f;
+}
+a.soc-follow.instagram {
+	background: url(../images/social/instagram.png) no-repeat 0 -40px;
+	background-color: #517FA4;
+}
+a.soc-follow.instagram:hover {
+	background-color: #517FA4;
+}
+a.soc-follow.lastfm {
+	background: url(../images/social/lastfm.png) no-repeat 0 -40px;
+}
+a.soc-follow.lastfm:hover {
+	background-color: #d21309;
+}
+a.soc-follow.linkedin {
+	background: url(../images/social/linkedin.png) no-repeat 0 -40px;
+	background-color: #71b2d0;
+}
+a.soc-follow.linkedin:hover {
+	background-color: #71b2d0;
+}
+a.soc-follow.metacafe {
+	background: url(../images/social/metacafe.png) no-repeat 0 -40px;
+}
+a.soc-follow.metacafe:hover {
+	background-color: #ef4035;
+}
+a.soc-follow.mixx {
+	background: url(../images/social/mixx.png) no-repeat 0 -40px;
+}
+a.soc-follow.mixx:hover {
+	background-color: #d80330;
+}
+a.soc-follow.myspace {
+	background: url(../images/social/myspace.png) no-repeat 0 -40px;
+}
+a.soc-follow.myspace:hover {
+	background-color: #003398;
+}
+a.soc-follow.netvibes {
+	background: url(../images/social/netvibes.png) no-repeat 0 -40px;
+}
+a.soc-follow.netvibes:hover {
+	background-color: #629e61;
+}
+a.soc-follow.newsvine {
+	background: url(../images/social/newsvine.png) no-repeat 0 -40px;
+}
+a.soc-follow.newsvine:hover {
+	background-color: #5b965a;
+}
+a.soc-follow.orkut {
+	background: url(../images/social/orkut.png) no-repeat 0 -40px;
+}
+a.soc-follow.orkut:hover {
+	background-color: #ed2590;
+}
+a.soc-follow.paypal {
+	background: url(../images/social/paypal.png) no-repeat 0 -40px;
+}
+a.soc-follow.paypal:hover {
+	background-color: #32689a;
+}
+a.soc-follow.picasa {
+	background: url(../images/social/picasa.png) no-repeat 0 -40px;
+}
+a.soc-follow.picasa:hover {
+	background-color: #444;
+}
+a.soc-follow.pinterest {
+	background: url(../images/social/pinterest.png) no-repeat 0 -40px;
+	background-color: #cb2027;
+}
+a.soc-follow.pinterest:hover {
+	background-color: #cb2027;
+}
+a.soc-follow.plurk {
+	background: url(../images/social/plurk.png) no-repeat 0 -40px;
+}
+a.soc-follow.plurk:hover {
+	background-color: #f35b36;
+}
+a.soc-follow.posterous {
+	background: url(../images/social/posterous.png) no-repeat 0 -40px;
+}
+a.soc-follow.posterous:hover {
+	background-color: #f9d560;
+}
+a.soc-follow.reddit {
+	background: url(../images/social/reddit.png) no-repeat 0 -40px;
+}
+a.soc-follow.reddit:hover {
+	background-color: #bfd0e2;
+}
+a.soc-follow.rss {
+	background: url(../images/social/rss.png) no-repeat 0 -40px;
+	background-color: #fe9900;
+}
+a.soc-follow.rss:hover {
+	background-color: #fe9900;
+}
+a.soc-follow.skype {
+	background: url(../images/social/skype.png) no-repeat 0 -40px;
+}
+a.soc-follow.skype:hover {
+	background-color: #18b7f1;
+}
+a.soc-follow.stumbleupon {
+	background: url(../images/social/stumbleupon.png) no-repeat 0 -40px;
+}
+a.soc-follow.stumbleupon:hover {
+	background-color: #eb4924;
+}
+a.soc-follow.technorati {
+	background: url(../images/social/technorati.png) no-repeat 0 -40px;
+}
+a.soc-follow.technorati:hover {
+	background-color: #7ac84f;
+}
+a.soc-follow.tumblr {
+	background: url(../images/social/tumblr.png) no-repeat 0 -40px;
+}
+a.soc-follow.tumblr:hover {
+	background-color: #3a5976;
+}
+a.soc-follow.twitter {
+	background: url(../images/social/twitter.png) no-repeat 0 -40px;
+	background-color: #48c4d2;
+}
+a.soc-follow.twitter:hover {
+	background-color: #48c4d2;
+}
+a.soc-follow.vimeo {
+	background: url(../images/social/vimeo.png) no-repeat 0 -40px;
+	background-color: #62a0ad;
+}
+a.soc-follow.vimeo:hover {
+	background-color: #62a0ad;
+}
+a.soc-follow.wordpress {
+	background: url(../images/social/wordpress.png) no-repeat 0 -40px;
+}
+a.soc-follow.wordpress:hover {
+	background-color: #464646;
+}
+a.soc-follow.yahoo {
+	background: url(../images/social/yahoo.png) no-repeat 0 -40px;
+}
+a.soc-follow.yahoo:hover {
+	background-color: #ab64bc;
+}
+a.soc-follow.yelp {
+	background: url(../images/social/yelp.png) no-repeat 0 -40px;
+}
+a.soc-follow.yelp:hover {
+	background-color: #c41200;
+}
+a.soc-follow.youtube {
+	background: url(../images/social/youtube.png) no-repeat 0 -40px;
+	background-color: #f45750;
+}
+a.soc-follow.youtube:hover {
+	background-color: #f45750;
+}
+a.soc-follow.zerply {
+	background: url(../images/social/zerply.png) no-repeat 0 -40px;
+}
+a.soc-follow.zerply:hover {
+	background-color: #8db259;
+}
+a.soc-follow.zootool {
+	background: url(../images/social/zootool.png) no-repeat 0 -40px;
+}
+a.soc-follow.zootool:hover {
+	background-color: #262626;
+}
+ul.socicon-2 li a:hover, ul.socicon li a:hover, a.soc-follow:hover {
+	background-position: 0 0;
+}
+
+/*author*/
+
+#author-share a.soc-follow,#share_port a.soc-follow { width:30px; height:30px; background-position: -5px -45px;}
+#author-share a.soc-follow:hover,#share_port a.soc-follow:hover{background-position: -5px -5px;}
+
+/*topbar*/
+
+#top a.soc-follow { width:30px; height:30px; background-position: -5px -45px;}
+
+#top a.soc-follow:hover{background-position: -5px -5px;}
+
+#top a.soc-follow.aim:hover {
+	background-color: #e95a00;
+}
+
+#top a.soc-follow.apple:hover {
+	background-color: #606060;
+}
+
+#top a.soc-follow.behance:hover {
+	background-color: #18a3fe;
+}
+
+#top a.soc-follow.blogger:hover {
+	background-color: #fb913f;
+}
+
+#top a.soc-follow.cargo:hover {
+	background-color: #00c462;
+}
+
+#top a.soc-follow.delicious:hover {
+	background-color: #3274d1;
+}
+
+#top a.soc-follow.deviantart:hover {
+	background-color: #d0de21;
+}
+
+#top a.soc-follow.digg:hover {
+	background-color: #2882c6;
+}
+
+#top a.soc-follow.dopplr:hover {
+	background-color: #99cc66;
+}
+
+#top a.soc-follow.dribbble:hover {
+	background-color: #ef5b92;
+}
+
+#top a.soc-follow.ember:hover {
+	background-color: #fb9d00;
+}
+
+#top a.soc-follow.evernote:hover {
+	background-color: #77ba2f;
+}
+
+#top a.soc-follow.facebook:hover{
+	background-color: #3b5998;
+}
+
+#top a.soc-follow.flickrs:hover {
+	background-color: #f1628b;
+}
+
+#top a.soc-follow.forrst:hover {
+	background-color: #5b9a68;
+}
+
+#top a.soc-follow.github:hover {
+	background-color: #7292a2;
+}
+
+#top a.soc-follow.google:hover {
+	background-color: #dd4b39;
+}
+
+#top a.soc-follow.googleplus:hover {
+	background-color: #d94a39;
+}
+
+#top a.soc-follow.gowalla:hover {
+	background-color: #ff920d;
+}
+
+#top a.soc-follow.grooveshark:hover {
+	background-color: #f88e00;
+}
+
+#top a.soc-follow.html5:hover {
+	background-color: #f3642c;
+}
+
+#top a.soc-follow.icloud:hover {
+	background-color: #fb913f;
+}
+
+#top a.soc-follow.instagram:hover {
+	background-color: #517FA4;
+}
+
+#top a.soc-follow.lastfm:hover {
+	background-color: #d21309;
+}
+
+#top a.soc-follow.linkedin:hover {
+	background-color: #71b2d0;
+}
+
+#top a.soc-follow.metacafe:hover {
+	background-color: #ef4035;
+}
+
+#top a.soc-follow.mixx:hover {
+	background-color: #d80330;
+}
+
+#top a.soc-follow.myspace:hover {
+	background-color: #003398;
+}
+
+#top a.soc-follow.netvibes:hover {
+	background-color: #629e61;
+}
+
+#top a.soc-follow.newsvine:hover {
+	background-color: #5b965a;
+}
+
+#top a.soc-follow.orkut:hover {
+	background-color: #ed2590;
+}
+
+#top a.soc-follow.paypal:hover {
+	background-color: #32689a;
+}
+
+#top a.soc-follow.picasa:hover {
+	background-color: #444;
+}
+
+#top a.soc-follow.pinterest:hover {
+	background-color: #cb2027;
+}
+
+#top a.soc-follow.plurk:hover {
+	background-color: #f35b36;
+}
+
+#top a.soc-follow.posterous:hover {
+	background-color: #f9d560;
+}
+
+#top a.soc-follow.reddit:hover {
+	background-color: #bfd0e2;
+}
+
+#top a.soc-follow.rss:hover {
+	background-color: #fe9900;
+}
+
+#top a.soc-follow.skype:hover {
+	background-color: #18b7f1;
+}
+
+#top a.soc-follow.stumbleupon:hover {
+	background-color: #eb4924;
+}
+
+#top a.soc-follow.technorati:hover {
+	background-color: #7ac84f;
+}
+
+#top a.soc-follow.tumblr:hover {
+	background-color: #3a5976;
+}
+
+#top a.soc-follow.twitter:hover {
+	background-color: #48c4d2;
+}
+
+#top a.soc-follow.vimeo:hover {
+	background-color: #62a0ad;
+}
+
+#top a.soc-follow.wordpress:hover {
+	background-color: #464646;
+}
+
+#top a.soc-follow.yahoo:hover {
+	background-color: #ab64bc;
+}
+
+#top a.soc-follow.yelp:hover {
+	background-color: #c41200;
+}
+
+#top a.soc-follow.youtube:hover {
+	background-color: #f45750;
+}
+
+#top a.soc-follow.zerply:hover {
+	background-color: #8db259;
+}
+
+#top a.soc-follow.zootool:hover {
+	background-color: #262626;
+}
+
+/*footer*/
+
+
+#footers a.soc-follow {
+	float: left;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	margin-top:5px;
+	padding: 0px;
+	background-color:#262626;
+}
+#footers a.soc-follow.aim:hover {
+	background-color: #e95a00;
+}
+
+#footers a.soc-follow.apple:hover {
+	background-color: #606060;
+}
+
+#footers a.soc-follow.behance:hover {
+	background-color: #18a3fe;
+}
+
+#footers a.soc-follow.blogger:hover {
+	background-color: #fb913f;
+}
+
+#footers a.soc-follow.cargo:hover {
+	background-color: #00c462;
+}
+
+#footers a.soc-follow.delicious:hover {
+	background-color: #3274d1;
+}
+
+#footers a.soc-follow.deviantart:hover {
+	background-color: #d0de21;
+}
+
+#footers a.soc-follow.digg:hover {
+	background-color: #2882c6;
+}
+
+#footers a.soc-follow.dopplr:hover {
+	background-color: #99cc66;
+}
+
+#footers a.soc-follow.dribbble:hover {
+	background-color: #ef5b92;
+}
+
+#footers a.soc-follow.ember:hover {
+	background-color: #fb9d00;
+}
+
+#footers a.soc-follow.evernote:hover {
+	background-color: #77ba2f;
+}
+
+#footers a.soc-follow.facebook:hover{
+	background-color: #3b5998;
+}
+
+#footers a.soc-follow.flickrs:hover {
+	background-color: #f1628b;
+}
+
+#footers a.soc-follow.forrst:hover {
+	background-color: #5b9a68;
+}
+
+#footers a.soc-follow.github:hover {
+	background-color: #7292a2;
+}
+
+#footers a.soc-follow.google:hover {
+	background-color: #dd4b39;
+}
+
+#footers a.soc-follow.googleplus:hover {
+	background-color: #d94a39;
+}
+
+#footers a.soc-follow.gowalla:hover {
+	background-color: #ff920d;
+}
+
+#footers a.soc-follow.grooveshark:hover {
+	background-color: #f88e00;
+}
+
+#footers a.soc-follow.html5:hover {
+	background-color: #f3642c;
+}
+
+#footers a.soc-follow.icloud:hover {
+	background-color: #fb913f;
+}
+#footers a.soc-follow.instagram:hover {
+	background-color: #517FA4;
+}
+
+#footers a.soc-follow.lastfm:hover {
+	background-color: #d21309;
+}
+
+#footers a.soc-follow.linkedin:hover {
+	background-color: #71b2d0;
+}
+
+#footers a.soc-follow.metacafe:hover {
+	background-color: #ef4035;
+}
+
+#footers a.soc-follow.mixx:hover {
+	background-color: #d80330;
+}
+
+#footers a.soc-follow.myspace:hover {
+	background-color: #003398;
+}
+
+#footers a.soc-follow.netvibes:hover {
+	background-color: #629e61;
+}
+
+#footers a.soc-follow.newsvine:hover {
+	background-color: #5b965a;
+}
+
+#footers a.soc-follow.orkut:hover {
+	background-color: #ed2590;
+}
+
+#footers a.soc-follow.paypal:hover {
+	background-color: #32689a;
+}
+
+#footers a.soc-follow.picasa:hover {
+	background-color: #444;
+}
+
+#footers a.soc-follow.pinterest:hover {
+	background-color: #cb2027;
+}
+
+#footers a.soc-follow.plurk:hover {
+	background-color: #f35b36;
+}
+
+#footers a.soc-follow.posterous:hover {
+	background-color: #f9d560;
+}
+
+#footers a.soc-follow.reddit:hover {
+	background-color: #bfd0e2;
+}
+
+#footers a.soc-follow.rss:hover {
+	background-color: #fe9900;
+}
+
+#footers a.soc-follow.skype:hover {
+	background-color: #18b7f1;
+}
+
+#footers a.soc-follow.stumbleupon:hover {
+	background-color: #eb4924;
+}
+
+#footers a.soc-follow.technorati:hover {
+	background-color: #7ac84f;
+}
+
+#footers a.soc-follow.tumblr:hover {
+	background-color: #3a5976;
+}
+
+#footers a.soc-follow.twitter:hover {
+	background-color: #48c4d2;
+}
+
+#footers a.soc-follow.vimeo:hover {
+	background-color: #62a0ad;
+}
+
+#footers a.soc-follow.wordpress:hover {
+	background-color: #464646;
+}
+
+#footers a.soc-follow.yahoo:hover {
+	background-color: #ab64bc;
+}
+
+#footers a.soc-follow.yelp:hover {
+	background-color: #c41200;
+}
+
+#footers a.soc-follow.youtube:hover {
+	background-color: #f45750;
+}
+
+#footers a.soc-follow.zerply:hover {
+	background-color: #8db259;
+}
+
+#footers a.soc-follow.zootool:hover {
+	background-color: #262626;
+}

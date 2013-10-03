@@ -1,0 +1,5 @@
+.news-info span,.scorehome{font-family:'Lucida Sans','Lucida Grande','Lucida Sans Unicode',sans-serif;}
+.csc-acc-widget li span, .csc-recent-posts li span, .csc-acc-widget li span a, .csc-recent-posts li span a, .csc-tab-widget li span a, .csc-tab-widget li span{font-family:'Lucida Sans','Lucida Grande','Lucida Sans Unicode',sans-serif;}
+.counter-widget a span{ display:block;font-size:22px; text-transform:uppercase; font-weight:700; padding:0 0 4px 0;}
+.counter-widget a em{ font-size:9px; text-transform: lowercase;}
+.breaking-roll{ width:780px !important; overflow:hidden !important;font-family:'Lucida Sans','Lucida Grande','Lucida Sans Unicode',sans-serif;}
