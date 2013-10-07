@@ -434,6 +434,7 @@ echo '<div class="teamer_member_title">';
 echo '<a href="/profile/'. $usernice . '"><h2>'. $username .'</h2></a>';
 echo '<p>'. $userspec .'</p>';
 echo '</div>';
+echo '</div>';
 echo '</li>';
 
 }
