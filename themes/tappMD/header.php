@@ -233,7 +233,7 @@ if ( is_front_page() ) {?>
                           
       </div>
       <div class="span8 banner_head_right">
-                            <?php contributors_head(); ?>
+                            <?php head_contributors(); ?>
       
       </div>
 </div>
