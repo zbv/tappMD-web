@@ -233,16 +233,7 @@ if ( is_front_page() ) {?>
                           
       </div>
       <div class="span8 banner_head_right">
-        
-        <?php 
-		$csc_banner_head_margin ='';
-		if (csc_option('csc_banner_head_margin')){ 
-		 $csc_banner_head_margin = 'margin-top:'.csc_option('csc_banner_head_margin'); 
-		}
-		
-		csc_banner('csc_banner_head' , '<div style="text-align:right; float:right;'. $csc_banner_head_margin .'">' , '</div>' ); 
-		
-		?>
+                            <?php contributors_head(); ?>
       
       </div>
 </div>

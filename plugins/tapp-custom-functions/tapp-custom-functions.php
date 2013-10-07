@@ -409,4 +409,22 @@ echo '</li>';
 
 }
 }
+
+//add list of contributors to header
+function head_contributors() {
+
+global $wpdb;
+
+$blogusers = get_users('role=author');
+
+foreach ($blogusers as $user) {
+
+$usernice = $user->user_nicename;
+
+echo '<li>';
+echo '<a href="/profile/'. $usernice . '">'. get_avatar ($user->ID) .'</a>';
+echo '</li>';
+
+}
+}
 ?>
