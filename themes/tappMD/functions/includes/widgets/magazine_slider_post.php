@@ -46,8 +46,8 @@ class csc_1_Magazine_slider_Widget extends WP_Widget {
 	
         <?php 
 		$ids = $args['widget_id'] ;
-		echo '<style> #'.$ids.' .widget-title h3,#'.$ids.' a.all_cat:hover,#'.$ids.' a.rss_cat:hover,#'.$ids.' .scorehome,#'.$ids.' span.icon,#'.$ids.' .rslides_nav:hover,#'.$ids.' .rslides_nav.next:hover,#'.$ids.' .news-info div,#'.$ids.' .button{ background-color:'.$background.';}</style>';
-        echo '<style>#'.$ids.' .color_t{color:'.$background.' !important;}</style>'
+		echo '<style type="text/css" media="all"> #'.$ids.' .widget-title h3,#'.$ids.' a.all_cat:hover,#'.$ids.' a.rss_cat:hover,#'.$ids.' .scorehome,#'.$ids.' span.icon,#'.$ids.' .rslides_nav:hover,#'.$ids.' .rslides_nav.next:hover,#'.$ids.' .news-info div,#'.$ids.' .button{ background-color:'.$background.';}</style>';
+        echo '<style type="text/css" media="all">#'.$ids.' .color_t{color:'.$background.' !important;}</style>'
 		?>
  	
 		<div class="row" style="position:relative;">

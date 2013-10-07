@@ -67,7 +67,7 @@ class csc_tabs_widget extends WP_Widget {
         <div class="row">
         <div class="span3">
         
-        <style>
+        <style type="text/css" media="all">
 		ul#<?php echo $ids ?> { border:none !important}
 		</style>
         

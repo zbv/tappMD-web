@@ -45,8 +45,8 @@ class csc_1_Magazine_bignews_Widget extends WP_Widget {
 		?>
          <?php 
 		$ids = $args['widget_id'] ;
-		echo '<style> #'.$ids.' .widget-title h3,#'.$ids.' a.all_cat:hover,#'.$ids.' a.rss_cat:hover,#'.$ids.' .scorehome,#'.$ids.' span.icon,#'.$ids.' .news-info div,#'.$ids.' .scorehomebig{ background-color:'.$background.';}</style>';
-        echo '<style> #'.$ids.' .color_t{color:'.$background.' !important;}</style>'
+		echo '<style type="text/css" media="all"> #'.$ids.' .widget-title h3,#'.$ids.' a.all_cat:hover,#'.$ids.' a.rss_cat:hover,#'.$ids.' .scorehome,#'.$ids.' span.icon,#'.$ids.' .news-info div,#'.$ids.' .scorehomebig{ background-color:'.$background.';}</style>';
+        echo '<style type="text/css" media="all"> #'.$ids.' .color_t{color:'.$background.' !important;}</style>'
 		?>
  	
 		<div class="row">
@@ -158,11 +158,11 @@ class csc_1_Magazine_bignews_Widget extends WP_Widget {
                      <a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>' class="entry-more"><?php _e('[...Read More] ', 'csc-themewp') ?> <i class="icon-circle-arrow-right"></i> </a>
                     </li>
 
-                </ul>	
+ 	
                 
 
 			<?php endwhile; ?>
-
+			               </ul>
 	    </div>
         </div>	
         

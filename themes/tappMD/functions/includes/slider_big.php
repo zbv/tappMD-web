@@ -45,7 +45,7 @@ $reset_post = $post;
 
 <?php  if ( csc_option('csc_flex_thum')) { ?>
 
-<style>
+<style type="text/css" media="all">
 #magflexslider.flexslider {margin: 0 0 102px 0;}
 #magflexslider .flex-control-nav { bottom: -102px; height:100px;}
 #magflexslider .flex-control-thumbs li { margin:0}
@@ -53,7 +53,7 @@ $reset_post = $post;
 
 <?php } else{ ?>
 
-<style>
+<style type="text/css" media="all">
 #magflexslider .flexslider {margin:0 0 6px 0;}
 #magflexslider .flex-control-nav { top:10px; right:10px;height:10px;}
 #magflexslider.flexslider .slides > li.slideblock{height:<?php echo $slider_size_post ?>px !important}

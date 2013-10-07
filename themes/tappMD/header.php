@@ -42,12 +42,12 @@ echo ' | ' . sprintf( __( 'Page %s', 'csc-themewp' ), max( $paged, $page ) );
 		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo csc_option('csc_72'); ?>">
 		<link rel="apple-touch-icon" sizes="114x114" href="<?php echo csc_option('csc_114'); ?>">
 		<link rel="apple-touch-icon" sizes="144x144" href="<?php echo csc_option('csc_144'); ?>">
-		<link rel="apple-touch-startup-image" sizes="2048x1496" href="<?php echo csc_option('csc_2048'); ?>" media="screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)">
-		<link rel="apple-touch-startup-image" sizes="1536x2008" href="<?php echo csc_option('csc_1536'); ?>" media="screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)">
-		<link rel="apple-touch-startup-image" sizes="1024x748" href="<?php echo csc_option('csc_1024'); ?>" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
-		<link rel="apple-touch-startup-image" sizes="768x1004" href="<?php echo csc_option('csc_768'); ?>" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-		<link rel="apple-touch-startup-image" sizes="640x920" href="<?php echo csc_option('csc_640'); ?>" media="screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)">
-		<link rel="apple-touch-startup-image" sizes="320x460" href="<?php echo csc_option('csc_320'); ?>" media="screen and (max-device-width: 320)">
+		<link rel="apple-touch-startup-image" sizes="2048x1496" href="<?php echo csc_option('csc_2048'); ?>">
+		<link rel="apple-touch-startup-image" sizes="1536x2008" href="<?php echo csc_option('csc_1536'); ?>">
+		<link rel="apple-touch-startup-image" sizes="1024x748" href="<?php echo csc_option('csc_1024'); ?>">
+		<link rel="apple-touch-startup-image" sizes="768x1004" href="<?php echo csc_option('csc_768'); ?>">
+		<link rel="apple-touch-startup-image" sizes="640x920" href="<?php echo csc_option('csc_640'); ?>">
+		<link rel="apple-touch-startup-image" sizes="320x460" href="<?php echo csc_option('csc_320'); ?>">
         
 <link rel="shortcut icon" href="<?php echo csc_option('csc_favicon'); ?>"/>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -222,7 +222,7 @@ if ( is_front_page() ) {?>
               
       
       <?php if ( csc_option('csc_logo_theme') ) { ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo csc_option('csc_logo_theme'); ?>" /></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo csc_option('csc_logo_theme'); ?>" /></a>
                             
 	<?php } else {?>
                             
