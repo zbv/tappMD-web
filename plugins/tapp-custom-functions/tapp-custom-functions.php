@@ -420,9 +420,20 @@ $blogusers = get_users('role=author');
 foreach ($blogusers as $user) {
 
 $usernice = $user->user_nicename;
+$userspec = $user->specialty;
+$userfirst = $user->first_name;
+$userlast = $user->last_name;	
+$usercert = $user->certifications;
+$username = $user->nickname;
 
-echo '<li>';
+
+echo '<li><div class="teamer_member_tag"><div class="teamer_member_img">';
 echo '<a href="/profile/'. $usernice . '">'. get_avatar ($user->ID) .'</a>';
+echo '</div>';
+echo '<div class="teamer_member_title">';
+echo '<a href="/profile/'. $usernice . '"><h2>'. $username .'</h2></a>';
+echo '<p>'. $userspec .'</p>';
+echo '</div>';
 echo '</li>';
 
 }

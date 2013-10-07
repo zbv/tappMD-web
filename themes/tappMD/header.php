@@ -233,7 +233,17 @@ if ( is_front_page() ) {?>
                           
       </div>
       <div class="span8 banner_head_right">
+      	<div class="Teamer  Teamer_Tapp">
+		    <div class="teamer_wrapper">
+		                        
+		        <div class="teamer_content">
+               		<ul>
                             <?php head_contributors(); ?>
+                            
+					</ul>
+	        	</div>
+	    	</div>
+		</div>    
       
       </div>
 </div>
