@@ -286,13 +286,6 @@ echo '<div class="menutopdefault"></div>';
 
  </div>
  
-<div class="span2 searchboxtop">
-<?php if (csc_option('csc_search_no')):?>
-<form method="get" id="searchform" action="<?php echo home_url(); ?>/">	
-<input class="input-medium search-query mains" type="text" id="s" name="s" value="<?php _e( 'Search...' , 'csc-themewp' ) ?>" onfocus="if (this.value == '<?php _e( 'Search...' , 'csc-themewp' ) ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php _e( 'Search...' , 'csc-themewp' ) ?>';}"  />
-</form>
-<?php  endif;?>
-</div>
 </div>
 
 <?php //end desktop view only
