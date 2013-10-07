@@ -7,6 +7,8 @@
 /***** General *****/
 
 html, body {font-family: 'Open Sans Condensed', sans-serif,'Lucida Sans','Lucida Grande','Lucida Sans Unicode',sans-serif;color:#60666c; margin:0; padding:0;}
+
+
 .left { float:left;}
 .right {float:right;}
 .center{ text-align:center;}
