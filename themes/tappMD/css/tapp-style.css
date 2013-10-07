@@ -1071,6 +1071,8 @@ article{ margin-bottom:20px;}
 	overflow:auto;
 	margin-bottom:10px;
 }
+
+/*Author in header */
 .Teamer html, .Teamer body, .Teamer div, .Teamer span, .Teamer object, .Teamer iframe, .Teamer h1, .Teamer h2, .Teamer h3, .Teamer h4, .Teamer h5, .Teamer h6, .Teamer p, .Teamer blockquote, .Teamer pre, .Teamer abbr, .Teamer address, .Teamer cite, .Teamer code, .Teamer del, .Teamer dfn, .Teamer em, .Teamer img, .Teamer ins, .Teamer kbd, .Teamer q, .Teamer samp, .Teamersmall, .Teamer strong, .Teamer sub, .Teamer sup, .Teamer var, .Teamer
 b, .Teamer i, .Teamer dl, .Teamer dt, .Teamer dd, .Teamer ol, .Teamer ul, .Teamer li, .Teamer fieldset, .Teamer form, .Teamer label, .Teamer legend, .Teamer table, .Teamer caption, .Teamer tbody, .Teamer tfoot, .Teamer thead, .Teamer tr, .Teamer th, .Teamer td, .Teamer article, .Teamer aside, .Teamer canvas, .Teamer details, .Teamer figcaption, .Teamer figure, .Teamer 
 footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer section, .Teamer summary, .Teamer time, .Teamer mark, .Teamer audio, .Teamer video { margin: 0;  padding: 0; border: 0;  outline: 0;  font-size: 100%;  vertical-align: baseline;  background: transparent; }
@@ -1115,7 +1117,7 @@ footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer secti
     width:100%;
     float:left;
 	text-align:center;
-    margin-top:5px;
+    margin-top:10px;
 }
 
 .Teamer .teamer_content ul { float:left; width:100%; margin-left: 15px; }
@@ -1174,5 +1176,5 @@ footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer secti
 .Teamer .teamer_member_img { float:left; padding-left:25px;}
 
 
-/*Author in header */
+
 
