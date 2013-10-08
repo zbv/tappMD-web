@@ -93,7 +93,6 @@ echo ' | ' . sprintf( __( 'Page %s', 'csc-themewp' ), max( $paged, $page ) );
 
 <body <?php body_class();?>>
         
-<?php csc_include( 'bg_set' );?>
 <?php  
 include CSC_BASE. 'css/typo-css.php'; 
 if ( csc_option('auto_stylesheet') ) {
@@ -218,7 +217,7 @@ if ( is_front_page() ) {?>
 <div class="row">
 
 
-      <div class="span4" style=" <?php if (csc_option('csc_logo_m_t')){ echo 'margin-top:'.csc_option('csc_logo_m_t').';'; }?> <?php if (csc_option('csc_logo_m_b')){ echo 'margin-bottom:'.csc_option('csc_logo_m_b').';'; }?>">
+      <div class="span3" style=" <?php if (csc_option('csc_logo_m_t')){ echo 'margin-top:'.csc_option('csc_logo_m_t').';'; }?> <?php if (csc_option('csc_logo_m_b')){ echo 'margin-bottom:'.csc_option('csc_logo_m_b').';'; }?>">
               
       
       <?php if ( csc_option('csc_logo_theme') ) { ?>
@@ -237,7 +236,7 @@ if ( is_front_page() ) {?>
       <?php }?>
                           
       </div>
-      <div class="span8 banner_head_right">
+      <div class="span9 banner_head_right">
       	<div class="Teamer  Teamer_Tapp">
 		    <div class="teamer_wrapper">
 		        <div class="teamer_content">

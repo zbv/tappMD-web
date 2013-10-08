@@ -104,32 +104,7 @@ get_header();
 <div class="row">
     <div class="span3">
     
-    <div class="widget-title"><h3>tapp Rank</h3></div>         
-                        
-        <ul class="w-recentpost" style="margin-bottom:0;">
-            <li class="rev_block" style="border-bottom:1px solid #E3E3E8; margin-bottom:5px; padding-bottom:10px; position:relative; overflow:hidden">
-                <span class="top-num">3</span>                   
-                    <header class="entry-header" style="margin-left:40px;padding-bottom:2px; border-bottom:1px solid #e3e3e8;">
-                        <h2 class="post-title-small"><a href="#" title="Influence">Influence</a> </h2>
-                    </header>
-                
-                <div class="entry-info" style="margin-left:40px; margin-top:5px;"> 
-                    <span class="scorehomebig">96%</span>							
-                    <span style="font-size:14px; font-style:normal !important;">Specialty : <a style="font-size:14px; font-style:normal !important;" href="#"><?php if (get_the_author_meta('specialty')) {?>
-       <?php echo get_the_author_meta('specialty'); ?></a></span>
-			<?php } else { ?>
-         	<?php } ?> 
-                </div>
-            </li>
-        </ul>
-    
-    </div>
-</div> 
-
-<div class="row">
-    <div class="span3">
-    
-    <div class="widget-title"><h3>Tapp Stats</h3></div>         
+    <div class="widget-title"><h3>tapp Stats</h3></div>         
                         
         <ul class="w-recentpost" style="margin-bottom:0;">
             <li class="rev_block" style="border-bottom:1px solid #E3E3E8; margin-bottom:5px; padding-bottom:10px; position:relative; overflow:hidden">                   
@@ -145,34 +120,11 @@ get_header();
          	<?php } ?>    </a></span>
                 </div>
             </li>
-            
-            <li class="rev_block" style="border-bottom:1px solid #E3E3E8; margin-bottom:5px; padding-bottom:10px; position:relative; overflow:hidden">                   
-                    <header class="entry-header" style="padding-bottom:2px; border-bottom:1px solid #e3e3e8;">
-                        <h2 class="post-title-small"><a href="#" title="Influence">Patient Rating</a> </h2>
-                    </header>
-                
-                <div class="entry-info" style="margin-top:5px;"> 
-                    <span class="scorehomebig">97%</span>							
-                        <span style="font-size:14px; font-style:normal !important;">Total Ratings : <a style="font-size:14px; font-style:normal !important;" href="#">37</a></span>
-                </div>
-            </li>
-            
-            <li class="rev_block" style="border-bottom:1px solid #E3E3E8; margin-bottom:5px; padding-bottom:10px; position:relative; overflow:hidden">                   
-                    <header class="entry-header" style="padding-bottom:2px; border-bottom:1px solid #e3e3e8;">
-                        <h2 class="post-title-small"><a href="#" title="Influence">Content Rating</a> </h2>
-                    </header>
-                
-                <div class="entry-info" style="margin-top:5px;"> 
-                    <span class="scorehomebig">94%</span>							
-                        <span style="font-size:14px; font-style:normal !important;">Total Shares : <a style="font-size:14px; font-style:normal !important;" href="#">612</a></span>
-                </div>
-            </li>
-            
-            
         </ul>
     
     </div>
 </div> 
+
 <!-- List The Author Categories -->
 <div class="row">
 	<div class="span3">
