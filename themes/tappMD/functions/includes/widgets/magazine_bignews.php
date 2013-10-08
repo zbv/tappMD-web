@@ -151,6 +151,10 @@ class csc_1_Magazine_bignews_Widget extends WP_Widget {
                 	<h2 class="post-title-small" style="margin-top:5px;"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h2>
                 </header>
                    
+                   <div class="author_bignews" style="float: left;">
+                   						 <?php echo userphoto_the_author_photo(); ?>
+
+                   </div>
                    <?php csc_post_info();?>
                 
 				<?php echo string_limit_words(get_the_excerpt(), 15); ?>

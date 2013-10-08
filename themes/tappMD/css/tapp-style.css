@@ -1177,6 +1177,8 @@ footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer secti
 }
 .Teamer .teamer_member_img { float:left; padding-left:25px;}
 
-
+/* Add Author To Post */
+.author_bignews {float:left; padding:5px;}
+.author_bignews img {height:50px; width:50px; border-radius:35px;}
 
 
