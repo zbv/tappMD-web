@@ -238,12 +238,12 @@ echo blog_author('blog_author_info');
 <ul class="socicon-2 pull-right" style="margin-top:0; background:none;padding-top:0 !important;">
             <?php if (get_the_author_meta('twitter')) { ?>
             <li>
-            <a href="<?php echo get_the_author_meta('twitter'); ?>" class="soc-follow twitter"  title="twitter"></a></li>
+            <a href="<?php echo get_the_author_meta('twitter'); ?>" class="soc-follow twitter"  title="<?php echo get_the_author_meta('display_name') ?> on twitter"></a></li>
             <?php } else { ?>
             <?php } ?>
             
             <?php if (get_the_author_meta('facebook')) { ?>
-            <li><a href="<?php echo get_the_author_meta('facebook'); ?>" class="soc-follow facebook"  title="facebook"></a></li>
+            <li><a href="<?php echo get_the_author_meta('facebook'); ?>" class="soc-follow facebook"  title="<?php echo get_the_author_meta('display_name') ?> on facebook"></a></li>
             <?php } else { ?>
             <?php } ?>
 
@@ -252,48 +252,31 @@ echo blog_author('blog_author_info');
             <li><a href="<?php echo get_the_author_meta('pinterest'); ?>" class="soc-follow pinterest" title="pinterest"></a></li>
             <?php } else { ?>
             <?php } ?>
-            
-            
-            <?php if (get_the_author_meta('flickr')) { ?>
-            <li><a href="<?php echo get_the_author_meta('flickr'); ?>" class="soc-follow flickrs"  title="flickr"></a></li>
-            <?php } else { ?>
-            <?php } ?>
+
             
             <?php if (get_the_author_meta('google')) { ?>
-            <li><a href="<?php echo get_the_author_meta('google'); ?>" class="soc-follow googleplus" title="google plus"></a></li>
+            <li><a href="<?php echo get_the_author_meta('google'); ?>" class="soc-follow googleplus" title="<?php echo get_the_author_meta('display_name') ?> on google plus"></a></li>
             <?php } else { ?>
             <?php } ?>
-            
-            <?php if (get_the_author_meta('instagram')) { ?>
-            <li><a href="<?php echo get_the_author_meta('instagram'); ?>" class="soc-follow instagram"  title="instagram"></a></li>
-            <?php } else { ?>
-            <?php } ?>
-            
-            <?php if (get_the_author_meta('apple')) { ?>
-            <li><a href="<?php echo get_the_author_meta('apple'); ?>" class="soc-follow apple"  title="apple"></a></li>
-            <?php } else { ?>
-            <?php } ?>
-            
-            <?php if (get_the_author_meta('dribbble')) { ?>
-            <li><a href="<?php echo get_the_author_meta('dribbble'); ?>" class="soc-follow dribbble"  title="dribbble"></a></li>
-            <?php } else { ?>
-            <?php } ?>
-           
-            
+         
             <?php if (get_the_author_meta('linkedin')) { ?>
-            <li><a href="<?php echo get_the_author_meta('linkedin'); ?>" class="soc-follow linkedin"  title="linkedin"></a></li>
+            <li><a href="<?php echo get_the_author_meta('linkedin'); ?>" class="soc-follow linkedin"  title="<?php echo get_the_author_meta('display_name') ?> on linkedin"></a></li>
             <?php } else { ?>
             <?php } ?>
             
             <?php if (get_the_author_meta('vimeo')) { ?>
-            <li><a href="<?php echo get_the_author_meta('vimeo'); ?>" class="soc-follow vimeo"  title="vimeo"></a></li>
+            <li><a href="<?php echo get_the_author_meta('vimeo'); ?>" class="soc-follow vimeo"  title="<?php echo get_the_author_meta('display_name') ?> vimeo"></a></li>
             <?php } else { ?>
             <?php } ?>
             
             <?php if (get_the_author_meta('youtube')) { ?>
-            <li><a href="<?php echo get_the_author_meta('youtube'); ?>" class="soc-follow youtube" ></a></li>
+            <li><a href="<?php echo get_the_author_meta('youtube'); ?>" class="soc-follow youtube" title="<?php echo get_the_author_meta('display_name') ?> on youtube" ></a></li>
             <?php } else { ?>
             <?php } ?>
+            
+             <?php if (get_the_author_meta('feedburner')) { ?>
+			<li><a href="<?php echo get_the_author_meta('feedburner'); ?>" class="soc-follow rss"  title="<?php echo get_the_author_meta('display_name') ?> rss" target="_blank"></a></li>
+			<?php } ?>
                        
 </ul>
 </div>
