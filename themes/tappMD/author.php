@@ -95,6 +95,9 @@ get_header();
             <li><a href="<?php echo get_the_author_meta('youtube'); ?>" class="soc-follow youtube" title="<?php echo get_the_author_meta('display_name') ?> on youtube" ></a></li>
             <?php } else { ?>
             <?php } ?>
+            <?php if (get_the_author_meta('feedburner')) { ?>
+			<li><a href="<?php echo get_the_author_meta('feedburner'); ?>" class="soc-follow rss"  title="<?php echo get_the_author_meta('display_name') ?> rss" target="_blank"></a></li>
+			<?php } ?>
                        
 </ul>            
     	</div>
@@ -242,6 +245,10 @@ dynamic_sidebar("Author Side Bar 1");
             <?php if (get_the_author_meta('youtube')) { ?>
             <li><a href="<?php echo get_the_author_meta('youtube'); ?>" class="soc-follow youtube" title="<?php echo get_the_author_meta('display_name') ?> on youtube" ></a></li>
             <?php } ?>
+            
+             <?php if (get_the_author_meta('feedburner')) { ?>
+			<li><a href="<?php echo get_the_author_meta('feedburner'); ?>" class="soc-follow rss"  title="<?php echo get_the_author_meta('display_name') ?> rss" target="_blank"></a></li>
+			<?php } ?>
                        
 </ul>
 </div>
