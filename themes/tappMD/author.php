@@ -60,10 +60,6 @@ get_header();
             <li><a href="<?php echo get_the_author_meta('facebook'); ?>" class="soc-follow facebook"  title="<?php echo get_the_author_meta('display_name') ?> on facebook"></a></li>
             <?php } ?>
             
-            <?php if (get_the_author_meta('pinterest')) { ?>
-            <li><a href="<?php echo get_the_author_meta('pinterest'); ?>" class="soc-follow pinterest" title="<?php echo get_the_author_meta('display_name') ?> on pinterest"></a></li>
-            <?php } ?>
-            
             <?php if (get_the_author_meta('google')) { ?>
             <li><a href="<?php echo get_the_author_meta('google'); ?>" class="soc-follow googleplus" title="<?php echo get_the_author_meta('display_name') ?> on google plus"></a></li>
             <?php } ?>
@@ -71,11 +67,7 @@ get_header();
             <?php if (get_the_author_meta('linkedin')) { ?>
             <li><a href="<?php echo get_the_author_meta('linkedin'); ?>" class="soc-follow linkedin"  title="<?php echo get_the_author_meta('display_name') ?> on linkedin"></a></li>
             <?php } ?>
-       
-            <?php if (get_the_author_meta('youtube')) { ?>
-            <li><a href="<?php echo get_the_author_meta('youtube'); ?>" class="soc-follow youtube" title="<?php echo get_the_author_meta('display_name') ?> on youtube" ></a></li>
-            <?php } ?>
-            
+
             <?php if (get_the_author_meta('feedburner')) { ?>
 			<li><a href="<?php echo get_the_author_meta('feedburner'); ?>" class="soc-follow rss"  title="<?php echo get_the_author_meta('display_name') ?> rss" target="_blank"></a></li>
 			<?php } ?>
