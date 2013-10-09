@@ -46,55 +46,36 @@ get_header();
 <div class="span3">
 
 <div class="row">
-	<div class="span2 author alert alert-info" id="author-share" style="text-align:center; padding-bottom:10px; padding-top:25px;">
+	<div class="span3" id="author-share" style="text-align:center; padding-bottom:10px; padding-top:25px;">
         	<div style="width:200px; display: block; margin-left:auto; margin-right:auto;">
             <?php echo userphoto_the_author_photo(); ?>
             
-            <ul class="socicon-2 pull-left author" style="padding-top:15px; margin-left:15px">
-            <style>
-            .author > ul.socicon-2 li{ margin-left:3px !important;}
-            </style>
+            <ul class="socicon-2 pull-left author" style="padding-top:15px; margin-left:20px">
+
             <?php if (get_the_author_meta('twitter')) { ?>
-            <li>
-            <a href="<?php echo get_the_author_meta('twitter'); ?>" class="soc-follow twitter"  title="<?php echo get_the_author_meta('display_name') ?> on twitter"></a></li>
-            <?php } else { ?>
+            <li><a href="<?php echo get_the_author_meta('twitter'); ?>" class="soc-follow twitter"  title="<?php echo get_the_author_meta('display_name') ?> on twitter"></a></li>
             <?php } ?>
             
             <?php if (get_the_author_meta('facebook')) { ?>
             <li><a href="<?php echo get_the_author_meta('facebook'); ?>" class="soc-follow facebook"  title="<?php echo get_the_author_meta('display_name') ?> on facebook"></a></li>
-            <?php } else { ?>
             <?php } ?>
-
             
             <?php if (get_the_author_meta('pinterest')) { ?>
             <li><a href="<?php echo get_the_author_meta('pinterest'); ?>" class="soc-follow pinterest" title="<?php echo get_the_author_meta('display_name') ?> on pinterest"></a></li>
-            <?php } else { ?>
             <?php } ?>
             
             <?php if (get_the_author_meta('google')) { ?>
             <li><a href="<?php echo get_the_author_meta('google'); ?>" class="soc-follow googleplus" title="<?php echo get_the_author_meta('display_name') ?> on google plus"></a></li>
-            <?php } else { ?>
-            <?php } ?>
-            
-            <?php if (get_the_author_meta('instagram')) { ?>
-            <li><a href="<?php echo get_the_author_meta('instagram'); ?>" class="soc-follow instagram"  title="<?php echo get_the_author_meta('display_name') ?> on instagram"></a></li>
-            <?php } else { ?>
             <?php } ?>
             
             <?php if (get_the_author_meta('linkedin')) { ?>
             <li><a href="<?php echo get_the_author_meta('linkedin'); ?>" class="soc-follow linkedin"  title="<?php echo get_the_author_meta('display_name') ?> on linkedin"></a></li>
-            <?php } else { ?>
             <?php } ?>
-            
-            <?php if (get_the_author_meta('vimeo')) { ?>
-            <li><a href="<?php echo get_the_author_meta('vimeo'); ?>" class="soc-follow vimeo"  title=<?php echo get_the_author_meta('display_name') ?> on "vimeo"></a></li>
-            <?php } else { ?>
-            <?php } ?>
-            
+       
             <?php if (get_the_author_meta('youtube')) { ?>
             <li><a href="<?php echo get_the_author_meta('youtube'); ?>" class="soc-follow youtube" title="<?php echo get_the_author_meta('display_name') ?> on youtube" ></a></li>
-            <?php } else { ?>
             <?php } ?>
+            
             <?php if (get_the_author_meta('feedburner')) { ?>
 			<li><a href="<?php echo get_the_author_meta('feedburner'); ?>" class="soc-follow rss"  title="<?php echo get_the_author_meta('display_name') ?> rss" target="_blank"></a></li>
 			<?php } ?>
@@ -191,8 +172,10 @@ dynamic_sidebar("Author Side Bar 1");
             <button type="button" class="btn btn-primary">Follow</button>
             <button type="button" class="btn btn-info">Ask A Question</button>    
             <button type="button" class="btn btn-success"><span class="st_sharethis_custom" displayText="Your Text">Recommend</span>
-</button> 
-            <button type="button" class="btn btn-warning">Subscribe</button>
+</button> 	
+			<?php if (get_the_author_meta('feedburner_username')) { ?>
+            <a href="http://feedburner.google.com/fb/a/mailverify?uri=<?php echo get_the_author_meta('feedburner_username'); ?>&amp;loc=en_US" title="Subscribe to <?php echo get_the_author_meta('display_name') ?>" target="_blank"><button type="button" class="btn btn-warning">Subscribe</button></a>
+            <?php } ?>
                     
             </p>
             </div>
@@ -229,19 +212,11 @@ dynamic_sidebar("Author Side Bar 1");
             <?php if (get_the_author_meta('google')) { ?>
             <li><a href="<?php echo get_the_author_meta('google'); ?>" class="soc-follow googleplus" title="<?php echo get_the_author_meta('display_name') ?> on google plus"></a></li>
             <?php } ?>
-            
-            <?php if (get_the_author_meta('instagram')) { ?>
-            <li><a href="<?php echo get_the_author_meta('instagram'); ?>" class="soc-follow instagram"  title="<?php echo get_the_author_meta('display_name') ?> on instagram"></a></li>
-            <?php } ?>
-            
+
             <?php if (get_the_author_meta('linkedin')) { ?>
             <li><a href="<?php echo get_the_author_meta('linkedin'); ?>" class="soc-follow linkedin"  title="<?php echo get_the_author_meta('display_name') ?> on linkedin"></a></li>
             <?php } ?>
-            
-            <?php if (get_the_author_meta('vimeo')) { ?>
-            <li><a href="<?php echo get_the_author_meta('vimeo'); ?>" class="soc-follow vimeo"  title=<?php echo get_the_author_meta('display_name') ?> on "vimeo"></a></li>
-            <?php } ?>
-            
+
             <?php if (get_the_author_meta('youtube')) { ?>
             <li><a href="<?php echo get_the_author_meta('youtube'); ?>" class="soc-follow youtube" title="<?php echo get_the_author_meta('display_name') ?> on youtube" ></a></li>
             <?php } ?>

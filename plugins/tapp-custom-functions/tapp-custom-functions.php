@@ -122,20 +122,13 @@ function show_extra_profile_fields( $user ) { ?>
 				<input type="text" name="pinterest" id="pinterest" value="<?php echo esc_attr( get_the_author_meta( 'pinterest', $user->ID ) ); ?>" class="regular-text" /><br />
 			</td>
 		</tr>
+		
         <tr>
 			<th><label for="instagram">Instagram URL</label></th>
 			<td>
 				<input type="text" name="instagram" id="instagram" value="<?php echo esc_attr( get_the_author_meta( 'instagram', $user->ID ) ); ?>" class="regular-text" /><br />
 			</td>
 		</tr>
-        <tr>
-			<th><label for="apple">Apple URL</label></th>
-			<td>
-				<input type="text" name="apple" id="apple" value="<?php echo esc_attr( get_the_author_meta( 'apple', $user->ID ) ); ?>" class="regular-text" /><br />
-			</td>
-		</tr>
-        
-        
         
         <tr>
 			<th><label for="google">Google + URL</label></th>
@@ -149,23 +142,19 @@ function show_extra_profile_fields( $user ) { ?>
 				<input type="text" name="linkedin" id="linkedin" value="<?php echo esc_attr( get_the_author_meta( 'linkedin', $user->ID ) ); ?>" class="regular-text" /><br />
 			</td>
 		</tr>
-		<tr>
-			<th><label for="flickr">Flickr URL</label></th>
-			<td>
-				<input type="text" name="flickr" id="flickr" value="<?php echo esc_attr( get_the_author_meta( 'flickr', $user->ID ) ); ?>" class="regular-text" /><br />
-			</td>
-		</tr>
         
-		<tr>
-			<th><label for="pinterest">Vimeo URL</label></th>
-			<td>
-				<input type="text" name="vimeo" id="vimeo" value="<?php echo esc_attr( get_the_author_meta( 'vimeo', $user->ID ) ); ?>" class="regular-text" /><br />
-			</td>
-		</tr>
 		<tr>
 			<th><label for="youtube">YouTube URL</label></th>
 			<td>
 				<input type="text" name="youtube" id="youtube" value="<?php echo esc_attr( get_the_author_meta( 'youtube', $user->ID ) ); ?>" class="regular-text" /><br />
+			</td>
+		</tr>
+		
+		<tr>
+			<th><label for="feedburner_username">Feedburner Feed Name</label></th>
+			<td>
+				<input type="text" name="feedburner_username" id="feedburner_username" value="<?php echo esc_attr( get_the_author_meta( 'feedburner_username', $user->ID ) ); ?>" class="regular-text" /><br />
+				<span class="description">Please input the [name] of your feedburner feed i.e. http://feeds.feedburner.com/[name]</span>
 			</td>
 		</tr>
 
@@ -289,7 +278,7 @@ function save_extra_profile_fields( $user_id ) {
 	update_user_meta( $user_id, 'flickr', $_POST['flickr'] );
 	update_user_meta( $user_id, 'youtube', $_POST['youtube'] );
 	update_user_meta( $user_id, 'vimeo', $_POST['vimeo'] );
-	update_user_meta( $user_id, 'apple', $_POST['apple'] );
+	update_user_meta( $user_id, 'feedburner_username', $_POST['feedburner_username'] );
 	update_user_meta( $user_id, 'instagram', $_POST['instagram'] );
 	update_user_meta( $user_id, 'pinterest', $_POST['pinterest'] );
 	update_user_meta( $user_id, 'media_reel', $_POST['media_reel'] );
