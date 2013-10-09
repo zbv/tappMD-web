@@ -238,7 +238,7 @@ dynamic_sidebar("Author Side Bar 1");
     
     <div class="span6 divider-strip author">
             
-    <h3 itemprop="author">Contact <span><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></span></h3>
+    <h3 itemprop="author">Visit <span><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></span></h3>
     </div>
     
     <div class="span3">
@@ -273,7 +273,7 @@ dynamic_sidebar("Author Side Bar 1");
          	<?php } ?> 
    		
 		<?php if (get_the_author_meta('user_url')) {?>
-        <li style="margin-bottom:5px"><strong>Web:</strong> <a href="<?php echo get_the_author_meta('user_url'); ?>" title="<?php echo get_the_author_meta('office-name'); ?>" target="_blank"><?php echo get_the_author_meta('user_url'); ?></a></li>
+        <li style="margin-bottom:5px"><strong>On The Web:</strong> <a href="<?php echo get_the_author_meta('user_url'); ?>" title="<?php echo get_the_author_meta('office-name'); ?>" target="_blank"><?php echo get_the_author_meta('user_url'); ?></a></li>
 			<?php } else { ?>
          	<?php } ?>         
         </ul>
