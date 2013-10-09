@@ -98,6 +98,8 @@ img {
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+  
+  box-shadow: 2px 2px 5px #888888;
 }
 #map_canvas img,
 .google-maps img {

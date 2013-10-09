@@ -221,7 +221,7 @@ if ( is_front_page() ) {?>
               
       
       <?php if ( csc_option('csc_logo_theme') ) { ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo csc_option('csc_logo_theme'); ?>" /></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo csc_option('csc_logo_theme'); ?>" style="box-shadow: none !important;"/></a>
                             
 	<?php } else {?>
                             

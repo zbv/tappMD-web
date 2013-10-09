@@ -92,7 +92,7 @@ a.logo{ height:50px; display:block; margin:15px 0 0 0; padding:10px 0 0 0; }
 
 nav select.menuselect{ display:none; margin-top:20px; width:100% !important;}
 nav{ display:inline-block; float:left;}
-nav ul.menu{ margin-bottom:0;}
+nav ul.menu{ margin-bottom:0; box-shadow: 2px 2px 5px #888888;}
 nav ul.menu li .data{ display:none !important;}
 nav ul.menu li:hover { visibility: inherit; }
 nav ul.menu li {float:left;position:relative;}
@@ -1140,7 +1140,6 @@ footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer secti
 .Teamer .teamer_member_tag img{ 
 	width:80px;
 	height:80px;
-	border:2px solid #f0f0f0;
 	padding:2px;
 	-moz-border-radius: 45px;
 	border-radius: 45px;
