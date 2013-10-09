@@ -91,7 +91,7 @@ get_header();
                 <div class="entry-info" style="margin-top:5px;"> 
                     <span class="scorehomebig"><?php echo number_format_i18n( get_the_author_posts() ); ?></span>							
                         <span style="font-size:14px; font-style:normal !important;">Main Category : <?php if (get_the_author_meta('specialty')) {?>
-       <a style="font-size:14px; font-style:normal !important;" href="/category/<?php echo get_the_author_meta('specialty'); ?>" title="<?php echo get_the_author_meta('specialty'); ?>"><?php echo get_the_author_meta('specialty'); ?>
+       <a style="font-size:14px; font-style:normal !important;" href="#" title="<?php echo get_the_author_meta('specialty'); ?>"><?php echo get_the_author_meta('specialty'); ?>
 			<?php } else { ?>
          	<?php } ?>    </a></span>
                 </div>
@@ -113,7 +113,7 @@ get_header();
 		 	
 	<?php /* Start the Loop */ ?>
 	
-	<?php $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 10) );
+	<?php $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 10, 'author' => $curauth->ID) );
 				while ( $loop->have_posts() ) : $loop->the_post(); 			
 		
 
