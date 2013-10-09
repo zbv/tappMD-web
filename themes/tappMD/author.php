@@ -104,53 +104,37 @@ get_header();
 <!-- List The Author Categories -->
 <div class="row">
 	<div class="span3">
-		<aside id="categories-2" class="widget widget_categories"><div class="widget-title">
-        	<h3>Resource Centers</h3></div>		
+<aside id="csc_recentpost_widget-2" class="widget csc-recent-posts">
+	<div class="widget-title">
+		<h3>Recent Posts</h3>
+	</div>
+	
+		<ul class="w-recentpost">
+		 	
+	<?php /* Start the Loop */ ?>
+	
+	<?php $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 10) );
+				while ( $loop->have_posts() ) : $loop->the_post(); 			
+		
 
-			<?php
-            $author = get_query_var('author');
-            $categories = $wpdb->get_results("
-                SELECT DISTINCT(terms.term_id) as ID, terms.name, terms.slug, tax.description
-                FROM $wpdb->posts as posts
-                LEFT JOIN $wpdb->term_relationships as relationships ON posts.ID = relationships.object_ID
-                LEFT JOIN $wpdb->term_taxonomy as tax ON relationships.term_taxonomy_id = tax.term_taxonomy_id
-                LEFT JOIN $wpdb->terms as terms ON tax.term_id = terms.term_id
-                WHERE 1=1 AND (
-                    posts.post_status = 'publish' AND
-                    posts.post_author = '$author' AND
-                    tax.taxonomy = 'category' )
-                ORDER BY terms.name ASC
-            ");
-            ?>
-			<ul>
-			<?php foreach($categories as $category) : ?>
-                <li class="cat-item">
-                    <a href="<?php echo get_category_link( $category->ID ); ?>" title="View all posts filed under <?php echo $category->name ?>">
-                        <?php echo $category->name.' '.$category->description; ?>
-                        <i class="icon-chevron-right"></i>
-                    </a>                      
-                </li>
+					 $thumb = get_post_thumbnail_id();
+				     $image = wp_get_attachment_url($thumb, 'full');
+                     $images = aq_resize($image, 90, 90 , true, true);?>
+                   <li style="margin-bottom:10px; padding-bottom:5px;" class=" bl-bg">
+                    <?php if(has_post_thumbnail()):?>
+					<a href="<?php echo get_permalink() ?>" class="imageLeft"><img alt=""  src="<?php echo $images ?>" /></a>
+                    <?php endif; ?> 
+					<header class="entry-header"><h2 class="post-title-small"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h2></header>
+                   
+                   <?php csc_post_info();?>
                 
-                 <?php // The Query
-                       		$catid = $category->ID;
-                       		$args = 'cat=' . $catid . '&orderby=date&order=ASC';
-							$the_query = new WP_Query( $args );
-							
-							// The Loop
-							if ( $the_query->have_posts() ) {
-								while ( $the_query->have_posts() ) {
-									$the_query->the_post(); ?>
-						<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
-							<?php	}
-							} else {
-								// no posts found
-							}
-							/* Restore original Post Data */
-							wp_reset_postdata();  ?>
-			<?php endforeach; ?>
-			</ul>
-			
-		</aside>
+				<?php echo string_limit_words(get_the_excerpt(), 20); ?>
+                    </li>
+				<?php endwhile;?>
+				
+		</ul>
+						
+		</aside>		
 	</div>
 </div>
     
@@ -303,29 +287,134 @@ dynamic_sidebar("Author Side Bar 1");
     
     <div class="divider-post span6" style="margin-bottom:15px;margin-top:0;"></div>
 
+    <div class="span6 divider-strip author">
+            
+    <h3 itemprop="author">Resource Centers Prescribed By <span><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></span></h3>
+    </div>
+    
+    <!--Begin DIV ID Resource Centers-->
+    <div class="span6" id="resource_centers">
+    <aside id="csc_magazine-widget_bignews-3" class="widget csc_magazine_bignews">		
 
-<div class="span6" id="blog_page">
-<div class="row" id="col2cat">
+		<div class="row">
 
-				
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+	<?php
+	//Run The Query To Select Categories With Author Posts
+	
+            $author = get_query_var('author');
+            $categories = $wpdb->get_results("
+                SELECT DISTINCT(terms.term_id) as ID, terms.name, terms.slug, tax.description
+                FROM $wpdb->posts as posts
+                LEFT JOIN $wpdb->term_relationships as relationships ON posts.ID = relationships.object_ID
+                LEFT JOIN $wpdb->term_taxonomy as tax ON relationships.term_taxonomy_id = tax.term_taxonomy_id
+                LEFT JOIN $wpdb->terms as terms ON tax.term_id = terms.term_id
+                WHERE 1=1 AND (
+                    posts.post_status = 'publish' AND
+                    posts.post_author = '$author' AND
+                    tax.taxonomy = 'category' )
+                ORDER BY terms.name ASC
+            ");
+            ?>
+
+	<?php foreach($categories as $category) : ?>
+		<!--Begin Title -->
+        <div class="span6" style="position:relative">
+          <div class="widget-title"><h3><?php echo $category->name.' '.$category->description; ?></h3></div> 
+          
+         <?php $category_id = $category->ID; ?>      
+          	<a class="rss_cat" href="<?php CSC_BASE_URL ?>?feed=rss2&cat=<?php echo $category_id;?>"></a>
+           	<a class="all_cat" href="<?php echo get_category_link( $category->ID ); ?>" title="View all posts filed under <?php echo $category->name ?>"></a>
+    
+	    
+		</div>
+		<!-- End Title -->
+		
+				 	<?php // The Query
+                       		$catid = $category->ID;
+							$authorid = $curauth->ID;
+                       		$args = 'cat=' . $catid . '&orderby=date&order=ASC&posts_per_page=1&author=' . $authorid;
+							$the_query = new WP_Query( $args );
+							
+							// The Loop
+							if ( $the_query->have_posts() ) {
+								while ( $the_query->have_posts() ) {
+									$the_query->the_post(); ?>	
+			 		
+			 	<?php $thumb = get_post_thumbnail_id();?>
+				<?php $image = wp_get_attachment_url($thumb, 'full'); ?>
+                <?php if ( wp_is_mobile() ) {
+						/* Resize Images For Display On mobile */
+						$images = aq_resize($image, 320, 200 , true, true);
+					} else {  
+						$images = aq_resize($image, 200, 130 , true, true);
+							}
+					?>
 					
-					<?php get_template_part( '/partials/content', get_post_format() ); ?>
+         
+		<!-- Begin post -->				
+          <div class="span6" style="position:relative">
 
-				<?php endwhile; ?>
-				
-				<?php /* Display navigation to next/previous pages when applicable */ ?>
-				<?php if (  $wp_query->max_num_pages > 1 ) : ?>
-					<div class="navigation span6">
-                 <?php if(function_exists('pagenavi')) { pagenavi(); } ?>
-                </div>
-                <div class="divider"></div>
-				<?php endif; ?>
+			 	<ul class="w-recentpost">
+			 		
+			 		
+                <?php if ( wp_is_mobile() ) {
+						/* Alignment For Mobile */
+						?>
+                        
+                 <li style="margin-bottom:10px; padding:10px;" class=" bl-bg">
+                 
+                 <?php } else { ?>
+                 
+                 <li style="margin-bottom:10px; padding-bottom:15px; padding-left:5px;" class=" bl-bg">
 
+				 <?php } ?>
 
-</div>
-</div>
+               	<?php if(has_post_thumbnail()):?>
+               	
+               		<a href="<?php the_permalink(); ?>" class="imageLeft" title="<?php the_permalink(); ?>">
+               			<img alt="<?php the_permalink(); ?>" src="<?php echo $images ?>">
+               		</a>			
+               		    
+				<?php endif; ?> 
+         
+				<header class="entry-header">
+                	<h2 class="post-title-small" style="margin-top:5px;">
+                		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+                </header>
+                   
+                   <div class="author_bignews" style="float: left;">
+            		<?php echo userphoto_the_author_photo(); ?>
+                   </div>
+                   
+					   <?php csc_post_info();?>
+                
+						<?php echo string_limit_words(get_the_excerpt(), 15); ?>
+		                     
+                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="entry-more"><?php _e('[...Read More] ', 'csc-themewp') ?> <i class="icon-circle-arrow-right"></i> </a>
+                     </li>
+                     
+                     
+
+ 	
+           </ul>
+	    </div>
+	    
+	    <?php	}
+							} else {
+								// no posts found
+							}
+							/* Restore original Post Data */
+							wp_reset_postdata();  ?>
+			<?php endforeach; ?>
+        </div>	
+        
+		</aside>
+		
+		
+		
+		</div><!--End DIV ID Resource Centers -->
+    
+
 
 </div>
 </div>
