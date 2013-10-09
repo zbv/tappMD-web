@@ -105,7 +105,7 @@ get_header();
 <div class="row">
 	<div class="span3">
 		<aside id="categories-2" class="widget widget_categories"><div class="widget-title">
-        	<h3>Categories</h3></div>		
+        	<h3>Resource Centers</h3></div>		
 
 			<?php
             $author = get_query_var('author');
@@ -128,8 +128,25 @@ get_header();
                     <a href="<?php echo get_category_link( $category->ID ); ?>" title="View all posts filed under <?php echo $category->name ?>">
                         <?php echo $category->name.' '.$category->description; ?>
                         <i class="icon-chevron-right"></i>
-                    </a>
+                    </a>                      
                 </li>
+                
+                 <?php // The Query
+                       		$catid = $category->ID;
+                       		$args = 'cat=' . $catid . '&orderby=date&order=ASC';
+							$the_query = new WP_Query( $args );
+							
+							// The Loop
+							if ( $the_query->have_posts() ) {
+								while ( $the_query->have_posts() ) {
+									$the_query->the_post(); ?>
+						<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></li>
+							<?php	}
+							} else {
+								// no posts found
+							}
+							/* Restore original Post Data */
+							wp_reset_postdata();  ?>
 			<?php endforeach; ?>
 			</ul>
 			
