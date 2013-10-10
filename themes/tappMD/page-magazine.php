@@ -94,7 +94,7 @@ if ($blogauthors) {
     $blogauthornice = $blogauthor->user_nicename;
 	$blogauthorname = $blogauthor->nickname;
 	echo '<li class="expert_sidebar bl-bg">';
-	echo '<header class="entry-header"><h2 class="post-title-small"><a href="'. $author_posts_url .'" title="'. $displayname .'">'. $blogauthorname .'</a></h2></header>';
+	echo '<header class="entry-header"><h2 class="post-title-small"><a href="/profile/'. $blogauthornice . '" title="'. $blogauthorname .'">'. $blogauthorname .'</a></h2></header>';
 	echo '<a href="/profile/'. $blogauthornice . '">'. get_avatar ($blogauthor->ID, 120) .'</a>';
     $args=array(
       'author' => $blogauthor->ID,
