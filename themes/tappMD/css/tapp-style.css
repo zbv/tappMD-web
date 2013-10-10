@@ -1180,4 +1180,10 @@ footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer secti
 .author_bignews {float:left; padding:5px;}
 .author_bignews img {height:50px; width:50px; border-radius:35px;}
 
+/* Expert Network Sidebar */
+.expert_sidebar{margin-bottom:10px; padding-bottom:5px;}
+.expert_sidebar img{float: left; margin: 5px 10px 5px 5px;}
+.expert_sidebar p{margin-right:3px;}
+.expert_sidebar h2{margin-left:5px;}
+
 

@@ -177,7 +177,7 @@ dynamic_sidebar("Author Side Bar 1");
 <div class="row">
     <div class="span6 divider-strip author">
             
-    <h3 itemprop="author">About <span class="fn  org"><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></span></h3>
+    <h3 itemprop="author">About <span class="fn  org"><?php echo $curauth->display_name; ?></span></h3>
     </div>
 	
     <div class="span6 author">
@@ -225,7 +225,7 @@ dynamic_sidebar("Author Side Bar 1");
 	<?php if (get_the_author_meta('media_reel')) { ?>
     <div class="span6 divider-strip author">
             
-    <h3 itemprop="author">Media Reel For <span><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></span></h3>
+    <h3 itemprop="author">Media Reel For <span><?php echo $curauth->display_name; ?></span></h3>
     </div>
 	
     <div class="span6 author">
@@ -239,7 +239,7 @@ dynamic_sidebar("Author Side Bar 1");
     
     <div class="span6 divider-strip author">
             
-    <h3 itemprop="author">Visit <span><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></span></h3>
+    <h3 itemprop="author">Visit <span><?php echo $curauth->display_name; ?></span></h3>
     </div>
     
     <div class="span3">
@@ -289,7 +289,7 @@ dynamic_sidebar("Author Side Bar 1");
 
     <div class="span6 divider-strip author">
             
-    <h3 itemprop="author">Resource Centers Prescribed By <span><?php echo $curauth->first_name; ?> <?php echo $curauth->last_name; ?></span></h3>
+    <h3 itemprop="author">Resource Centers Prescribed By <span><?php echo $curauth->display_name; ?></span></h3>
     </div>
     
     <!--Begin DIV ID Resource Centers-->
@@ -448,7 +448,18 @@ dynamic_sidebar("Author Side Bar 1");
 </div>
 
 <div class="row">
-<div class="span3">
+	<div class="span3">
+		<aside id="gform_widget-2" class="widget gform_widget">
+			<div class="widget-title">
+			<h3>Contact <?php echo $curauth->display_name; ?></h3>
+			</div>
+		<?php gravity_form('Expert Contact', false, false, false, '', false); ?>
+		</aside>
+	</div>
+</div>
+
+<div class="row">
+<div class="span3">	
 <?php 
 $sidebar_archive2 = csc_option( 'csc_sidebar_archive2') ;
  dynamic_sidebar("Author Side Bar 2");

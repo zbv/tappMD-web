@@ -80,8 +80,50 @@ if (csc_option('csc_def_mag_block')&& csc_option('csc_def_mag_block')!='sliders'
 <div class="span3">
 <div class="row">
 <div class="span3">
+<aside id="csc_recentpost_widget-2" class="widget csc-recent-posts">
+	<div class="widget-title">
+		<h3>Expert Network</h3>
+	</div>
+		<ul class="w-recentpost expert_sidebar">
+
+<?php
+//displays all users with their avatar and their posts (titles)
+$blogauthors = get_users('role=author');
+if ($blogauthors) {
+  foreach ($blogauthors as $blogauthor) {
+    $blogauthornice = $blogauthor->user_nicename;
+	$blogauthorname = $blogauthor->nickname;
+	echo '<li class="expert_sidebar bl-bg">';
+	echo '<header class="entry-header"><h2 class="post-title-small"><a href="'. $author_posts_url .'" title="'. $displayname .'">'. $blogauthorname .'</a></h2></header>';
+	echo '<a href="/profile/'. $blogauthornice . '">'. get_avatar ($blogauthor->ID, 120) .'</a>';
+    $args=array(
+      'author' => $blogauthor->ID,
+      'post_type' => 'post',
+      'post_status' => 'publish',
+      'posts_per_page' => 2,
+      'caller_get_posts'=> 1
+    );
+    $my_query = null;
+    $my_query = new WP_Query($args);
+    if( $my_query->have_posts() ) {
+      //echo 'List of Posts for ' . user->user_firstname . ' ' . $user->user_lastname;
+      while ($my_query->have_posts()) : $my_query->the_post(); ?>
+        <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+        <?php endwhile;
+    }
+  wp_reset_query();  // Restore global post data stomped by the_post().
+  }
+ echo '</li>';
+}
+?>
+</ul>
+</aside>
+</div>
+</div>
 
 
+<div class="row">
+<div class="span3">
 <?php 
 if (is_page()) {
 $name = get_post_meta($post->ID, 'sbg_selected_sidebar', true);
