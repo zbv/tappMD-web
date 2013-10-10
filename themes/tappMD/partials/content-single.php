@@ -226,8 +226,14 @@ csc_include( 'reviews' );
 endif;
 ?>
 
-
-
+<?php
+//Check to see if author has role author
+if (is_singular()) {
+    $author_id = get_queried_object()->post_author;
+    }
+    
+    $userlevel = get_the_author_meta('user_level');
+	if ($userlevel== 2) { ?>
 <?php if( !rwmb_meta( 'csc_hide_author') && !csc_option('csc_hide_author2')):?>
 <div class="divider" style="margin:0;"></div>
 <?php 
@@ -286,7 +292,7 @@ echo blog_author('blog_author_info');
 <?php	
 endif;
 ?>
-
+<?php } ?>
 <?php if( !csc_option('csc_hide_prev_next')):?>
 
 <div class="divider-post span6" style="margin-bottom:0px;"></div>
