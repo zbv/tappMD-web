@@ -226,6 +226,8 @@ csc_include( 'reviews' );
 endif;
 ?>
 
+
+
 <?php if( !rwmb_meta( 'csc_hide_author') && !csc_option('csc_hide_author2')):?>
 <div class="divider" style="margin:0;"></div>
 <?php 
