@@ -80,6 +80,8 @@ if (csc_option('csc_def_mag_block')&& csc_option('csc_def_mag_block')!='sliders'
 <div class="span3">
 <div class="row">
 <div class="span3">
+
+
 <?php 
 if (is_page()) {
 $name = get_post_meta($post->ID, 'sbg_selected_sidebar', true);
@@ -94,6 +96,7 @@ dynamic_sidebar ( sanitize_title( $page_sidebar ) );
 else dynamic_sidebar("Sidebar One");
 }
 ?>
+
 </div>
 </div>
 </div>
