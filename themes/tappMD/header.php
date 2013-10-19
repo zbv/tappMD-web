@@ -27,7 +27,8 @@
 
 <title><?php
 wp_title( '|', true, 'right' );
-/* Removed and added WPSEO Yoast Title Tags global $page, $paged;
+/* Removed and added WPSEO Yoast Title Tags 
+global $page, $paged;
 wp_title( '|', true, 'right' );
 bloginfo( 'name' );
 $site_description = get_bloginfo( 'description', 'display' );
