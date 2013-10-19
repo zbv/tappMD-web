@@ -26,7 +26,8 @@
 <meta name="apple-touch-fullscreen" content="yes" />
 
 <title><?php
-global $page, $paged;
+wp_title( '|', true, 'right' );
+/* Removed and added WPSEO Yoast Title Tags global $page, $paged;
 wp_title( '|', true, 'right' );
 bloginfo( 'name' );
 $site_description = get_bloginfo( 'description', 'display' );
@@ -34,7 +35,7 @@ if ( $site_description && ( is_home() || is_front_page() ) )
 if ( $paged >= 2 || $page >= 2 )
 echo ' | ' . sprintf( __( 'Page %s', 'csc-themewp' ), max( $paged, $page ) );
 echo " | $site_description";
-?></title>
+ */?></title>
 
 <!-- Custom Header/Mobile Icons -->
 
@@ -89,6 +90,20 @@ echo " | $site_description";
 
 <?php } ?>
 
+ <?php if ( csc_option('csc_ga_code') ) {?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<?php echo csc_option('csc_ga_code'); ?>']);
+  _gaq.push(['_setDomainName', '<?php echo csc_option('csc_ga_domain'); ?>']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<?php } ?>
 </head>
 
 <body <?php body_class();?>>

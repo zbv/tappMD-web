@@ -102,21 +102,7 @@
 
  <?php wp_footer(); ?>
  
-
- <?php if ( csc_option('csc_ga_code') ) {?>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '<?php echo csc_option('csc_ga_code'); ?>']);
-  _gaq.push(['_setDomainName', '<?php echo csc_option('csc_ga_domain'); ?>']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-<?php } if (csc_option('csc_sharethis')) {?>
+<?php if (csc_option('csc_sharethis')) {?>
 <script type="text/javascript">stLight.options({publisher: "<?php echo csc_option('csc_sharethis') ?>", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 <script>
 var options={ "publisher": "<?php echo csc_option('csc_sharethis') ?>", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["twitter", "facebook", "pinterest", "linkedin", "googleplus", "email"]}};
