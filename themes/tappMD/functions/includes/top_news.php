@@ -105,9 +105,13 @@
                 
                 <?php endif;?>
 
-                <h3 class="post-title-small" style="margin-left:10px"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h3> 
-                <div class="entry-info" style="margin-top:7px;margin-left:10px"> 
+                <h3 class="post-title-small" style="margin-left:10px"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h3>
                 
+                <div class="entry-info" style="margin-top:7px;margin-left:10px">
+                
+					<h3 class="challenge-title"><a href='<?php the_permalink(); ?>' title='Take The Challenge <?php the_title(); ?>'>Take The Challenge </a></h3>
+				
+				
 <?php if( rwmb_meta('csc_reviews_system') == 'percentage' && rwmb_meta('csc_reviews_act')):
 			globalScore();
 			global $totalscore;
