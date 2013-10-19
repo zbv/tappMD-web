@@ -1187,3 +1187,13 @@ footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer secti
 .expert_sidebar h2{margin-left:5px;}
 
 
+/*Top News Challenge */
+.challenge-title {
+	font-family: 'PT Sans', sans, serif;
+	font-weight: 400;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 16px;
+	background-color: #fe006b;
+}
+

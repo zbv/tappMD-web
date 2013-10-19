@@ -106,39 +106,10 @@
                 <?php endif;?>
 
                 <h3 class="post-title-small" style="margin-left:10px"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h3>
-                
-                <div class="entry-info" style="margin-top:7px;margin-left:10px">
-                
+                                
 					<h3 class="challenge-title"><a href='<?php the_permalink(); ?>' title='Take The Challenge <?php the_title(); ?>'>Take The Challenge </a></h3>
 				
-				
-<?php if( rwmb_meta('csc_reviews_system') == 'percentage' && rwmb_meta('csc_reviews_act')):
-			globalScore();
-			global $totalscore;
-            ?>
-							
-    <span class="p-rate" style="margin-left:5px; font-style:italic; font-size:11px; color:#999999"><i class="icon-trophy"></i> <?php echo $totalscore*10;?>%</span>							
-<?php endif; ?>
-
-<?php if( rwmb_meta('csc_reviews_system') == 'points' && rwmb_meta('csc_reviews_act')):
-			globalScore();
-			global $totalscore;
-            ?>
-							
-	 <span class="p-rate" style="margin-left:5px; font-style:italic; font-size:11px; color:#999999"><i class="icon-trophy"></i> <?php echo $totalscore;?></span>							
-<?php endif; ?> 
-<?php
-			if( rwmb_meta('csc_reviews_system') == 'stars' && rwmb_meta('csc_reviews_act')):
-			globalScore();
-			global $totalscore;
-			$starscore = $totalscore / 2;
-            $starscore = round($starscore/.5)*.5;
-            ?>
-            <span class="stars-rate" style="background:none !important;"><img src="<?php echo get_template_directory_uri(); ?>/images/stars/<?php echo $starscore ?>.png" alt="" style=" margin-left:5px;margin-top:-5px !important;" /></span>
-            
-			<?php endif; ?>   
-
-               </div>
+			
               </div> 
                
 			<?php endwhile;?>
