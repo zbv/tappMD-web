@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-admin
+Disallow: /wp-login
+
+Sitemap: http://tappmd.com/sitemap_index.xml
+Sitemap: http://tappmd.com/post-sitemap.xml
+Sitemap: http://tappmd.com/page-sitemap.xml
+Sitemap: http://tappmd.com/category-sitemap.xml
+Sitemap: http://tappmd.com/author-sitemap.xml
+
+User-agent: Mediapartners-Google*
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /wp-content/uploads
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot
+Allow: /
