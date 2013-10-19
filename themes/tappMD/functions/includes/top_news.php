@@ -79,7 +79,7 @@
 				        <?php $image = wp_get_attachment_url($thumb, 'full'); ?>
                         <?php $images = aq_resize($image, 70, 70 , true, true);?>
 						
-						<div style="margin-right:15px; float:left;margin-left:10px;">
+						<div style="margin-right:10px; float:left;margin-left:5px;">
 
 				          <a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>' ><img src="<?php echo $images; ?>" alt="<?php the_title(); ?>" /></a>
                           
