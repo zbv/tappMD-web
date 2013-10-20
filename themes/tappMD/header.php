@@ -75,7 +75,7 @@ echo " | $site_description";
 	/* Don't Show ShareThis On mobile */
 	?>
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/add2home.css">
-		<script src="<?php echo get_template_directory_uri(); ?>/js/add2home.js"></script> 
+		<script src="<?php echo get_template_directory_uri(); ?>/js/add2home.min.js"></script> 
 
 <?php } else { ?>
 <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
