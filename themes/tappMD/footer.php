@@ -94,11 +94,11 @@
 
 </div>
 
-<?php //if ( wp_is_mobile() ) { ?>
+<?php if ( wp_is_mobile() ) { ?>
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.jpanelmenu.min.js"></script>
 	
-<?php // } ?>
+<?php  } ?>
 
  <?php wp_footer(); ?>
  
