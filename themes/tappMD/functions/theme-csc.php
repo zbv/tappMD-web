@@ -9,13 +9,13 @@ add_filter('login_headerurl', 'wpc_url_login');
 
 // Custom WordPress Admin Color Scheme
 function admin_css() {
-	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin.css' );
+	wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin.css', false, null, 'all');
 }
 add_action('admin_print_styles', 'admin_css' );
 
 // Custom WordPress Login Screen
 function login_css() {
-	wp_enqueue_style( 'login_css', get_template_directory_uri() . '/css/login.css' );
+	wp_enqueue_style( 'login_css', get_template_directory_uri() . '/css/login.css', false, null, 'all');
 }
 add_action('login_head', 'login_css');
 
