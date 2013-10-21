@@ -317,11 +317,11 @@ dynamic_sidebar("Author Side Bar 1");
             ?>
 
 	<?php foreach($categories as $category) : ?>
+		<?php $category_id = $category->ID; ?>
 		<!--Begin Title -->
         <div class="span6" style="position:relative">
-          <div class="widget-title"><h3><?php echo $category->name.' '.$category->description; ?></h3></div> 
+          <div class="widget-title"><h3><a href="<?php CSC_BASE_URL ?>?&cat=<?php echo $category_id;?>&author=<?php echo $curauth->ID;?>" title="View all posts by <?php echo $curauth->display_name; ?> in <?php echo $category->name; ?>"><?php echo $category->name.' '.$category->description; ?></a></h3></div> 
           
-         <?php $category_id = $category->ID; ?>      
           	<a class="rss_cat" href="<?php CSC_BASE_URL ?>?feed=rss2&cat=<?php echo $category_id;?>&author=<?php echo $curauth->ID;?>"></a>
            	<a class="all_cat" href="<?php CSC_BASE_URL ?>?&cat=<?php echo $category_id;?>&author=<?php echo $curauth->ID;?>" title="View all posts by <?php echo $curauth->display_name; ?> in <?php echo $category->name; ?>"></a>
     

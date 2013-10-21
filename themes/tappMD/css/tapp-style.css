@@ -21,6 +21,7 @@ html, body {font-family: 'Open Sans Condensed', sans-serif,'Lucida Sans','Lucida
 .divider-strip h1,.divider-strip h3{ font-size:20px; float:left; text-transform:uppercase; margin:0; padding:0 20px 0 0; background:#ffffff;font-family: 'Open Sans Condensed', sans-serif; font-weight:700;}
 .widget-title { overflow:hidden; margin-bottom:15px; background-color:#f0f0f0; border-bottom:2px #e5e4e4 solid; padding:4px 0 3px 4px; box-shadow: 2px 2px 5px #888888;}
 .widget-title h3{font-weight:400; margin:0; padding:5px 10px 6px 10px; line-height:16px;font-size:16px; float:left;text-transform:uppercase;font-family: 'Oswald' ,sans,serif;}
+.widget-title h3 a{color: #ffffff !important; }
 a.all_cat{ position:absolute; top:2px; right:21px; z-index:5;background-image:url(../images/link-cat.png); height:20px; width:20px; display:block;}
 a.rss_cat{ position:absolute; top:2px; right:0px;z-index:5;background-image:url(../images/rss-cat.png); height:20px; width:20px; display:block;}
 .divider-strip.author{margin-bottom:30px;}
