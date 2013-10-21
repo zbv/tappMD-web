@@ -84,15 +84,6 @@ global $post;
     
      <div style="position:relative;">
       <a href="<?php if (get_post_meta($post->ID, "csc_project_urlss", true)) { print get_post_meta($post->ID, "csc_project_urlss", true);} else { the_permalink(); } ?>" title="<?php the_title(); ?>"><img src="<?php echo $images; ?>" alt="<?php the_title(); ?>" /></a>
-       <?php  if ( csc_option('csc_cat_badge')) : ?>
-      
-                           <!-- <div class="cat-slider" style="position:absolute; bottom:5px; right:5px; z-index:999; padding:10px 7px 10px 7px; font-size:16px; color:#f8f8f8; text-transform:uppercase; opacity:0;">
-							  
-                              <?php// $category = get_the_category();
-                              //if($category[0]){ echo '<a href="'.get_category_link($category[0]->term_id ).'" style="color:#f8f8f8;" >'.$category[0]->cat_name.'</a>';} ?>
-                           </div> -->
-                              
-                              <?php endif;?>
       </div>
       
 
