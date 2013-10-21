@@ -369,7 +369,7 @@ jQuery.noConflict();
    
   //prettyPhoto
 
-  jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+  //jQuery("a[rel^='prettyPhoto']").prettyPhoto();
 
 
   //Toggle
@@ -510,6 +510,314 @@ jQuery(function(){
 
 });
 
+/*
+|--------------------------------------------------------------------------
+| UItoTop jQuery Plugin 1.1
+| http://www.mattvarone.com/web-design/uitotop-jquery-plugin/
+|--------------------------------------------------------------------------
+*/
+
+(function($){
+	$.fn.UItoTop = function(options) {
+
+ 		var defaults = {
+			text: 'To Top',
+			min: 200,
+			inDelay:600,
+			outDelay:400,
+  			containerID: 'toTop',
+			containerHoverID: 'toTopHover',
+			scrollSpeed: 1200,
+			easingType: 'linear'
+ 		};
+
+ 		var settings = $.extend(defaults, options);
+		var containerIDhash = '#' + settings.containerID;
+		var containerHoverIDHash = '#'+settings.containerHoverID;
+		
+		$('body').append('<a href="#" id="'+settings.containerID+'">'+settings.text+'</a>');
+		$(containerIDhash).hide().click(function(){
+			$('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
+			$('#'+settings.containerHoverID, this).stop().animate({'opacity': 0 }, settings.inDelay, settings.easingType);
+			return false;
+		})
+		.prepend('<span id="'+settings.containerHoverID+'"></span>')
+		.hover(function() {
+				$(containerHoverIDHash, this).stop().animate({
+					'opacity': 1
+				}, 600, 'linear');
+			}, function() { 
+				$(containerHoverIDHash, this).stop().animate({
+					'opacity': 0
+				}, 700, 'linear');
+			});
+					
+		$(window).scroll(function() {
+			var sd = $(window).scrollTop();
+			if(typeof document.body.style.maxHeight === "undefined") {
+				$(containerIDhash).css({
+					'position': 'absolute',
+					'top': $(window).scrollTop() + $(window).height() - 50
+				});
+			}
+			if ( sd > settings.min ) 
+				$(containerIDhash).fadeIn(settings.inDelay);
+			else 
+				$(containerIDhash).fadeOut(settings.Outdelay);
+		});
+
+};
+})(jQuery);
+
+//jquery.csctip.js
+
+jQuery(function() {
+
+	
+	var hash = window.location.hash.substr(1);
+	hash = hash.replace(/%20/gi,' ');
+	var y=0;
+	jQuery('a.itemload').each(function(){
+		var i=0;
+		var $this = jQuery(this);							 
+		var dataAjax = $this.attr('data-ajax');
+		var itemHref = $this.attr('href');
+		
+		if(hash==dataAjax){
+		
+			if (y < 1) {
+				jQuery(this).addClass('active');
+				jQuery('html, body').animate({scrollTop: jQuery(".top_portfolio").parent().offset().top}, 1000, function() {
+					if (i < 1) { 
+						jQuery(this).addClass('active');
+						loadAjaxitem(itemHref);
+						jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+					}
+					i++;
+				});
+			}
+			y++;
+		}											
+	});
+		
+	
+	jQuery("body").on("click", '.itemload', function() {
+		var i=0;
+		
+		jQuery('a.itemload').removeClass('active');
+		jQuery(this).addClass('active');					   					   
+			
+		var $this = jQuery(this);	
+		var dataAjax = $this.attr('data-ajax');
+		var itemHref = $this.attr('href');
+		
+		if(window.location.hash.substr(1) == dataAjax) { 
+			jQuery('html, body').animate({scrollTop: jQuery(".top_portfolio").parent().offset().top}, 1000);
+		} else {
+			window.location.hash = dataAjax;	
+			jQuery('html, body').animate({scrollTop: jQuery(".top_portfolio").parent().offset().top}, 1000, function() {
+				
+				if (i < 1) {
+					jQuery('#pagecontent').slideUp(1000, 'easeInOutExpo', function() {
+						loadAjaxitem(itemHref);
+						jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+					});
+				}
+				i++;
+			});
+		}
+		return(false);
+	});
+	
+
+		
+	function loadAjaxitem(itemHref) {
+		
+		jQuery('.loader').fadeIn(100);
+		
+		var loadAjaxData = itemHref;
+		var deletestring = 'http://'+window.location.host+window.location.pathname;
+		var analyticspath = itemHref.replace(deletestring, '');
+		if (_gaq) {
+			_gaq.push(['_trackPageview', analyticspath]);
+		}
+		
+		jQuery('#pageloader').delay(1000).queue(function() {
+			jQuery(this).load(loadAjaxData, function() {
+				jQuery('#pagecontent').slideDown(1000, 'easeInOutExpo', function() {
+					jQuery('.loader').fadeOut(1000);
+					jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+				});	
+			});
+			jQuery(this).dequeue();
+		});
+		
+				
+
+	}
+
+});
+
+
+//Application.js
+// NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
+// IT'S ALL JUST JUNK FOR OUR DOCS!
+// ++++++++++++++++++++++++++++++++++++++++++
+
+!function ($) {
+
+  $(function(){
+
+    var $window = $(window)
+
+    // Disable certain links in docs
+    $('section [href^=#]').click(function (e) {
+      e.preventDefault()
+    })
+
+    // side bar
+    setTimeout(function () {
+      $('.bs-docs-sidenav').affix({
+        offset: {
+          top: function () { return $window.width() <= 980 ? 290 : 210 }
+        , bottom: 270
+        }
+      })
+    }, 100)
+
+    // make code pretty
+    window.prettyPrint && prettyPrint()
+
+    // add-ons
+    $('.add-on :checkbox').on('click', function () {
+      var $this = $(this)
+        , method = $this.attr('checked') ? 'addClass' : 'removeClass'
+      $(this).parents('.add-on')[method]('active')
+    })
+
+    // add tipsies to grid for scaffolding
+    if ($('#gridSystem').length) {
+      $('#gridSystem').tooltip({
+          selector: '.show-grid > [class*="span"]'
+        , title: function () { return $(this).width() + 'px' }
+      })
+    }
+
+    // tooltip demo
+    $('.tooltip-demo').tooltip({
+      selector: "a[data-toggle=tooltip]"
+    })
+
+    $('.tooltip-test').tooltip()
+    $('.popover-test').popover()
+
+    // popover demo
+    $("a[data-toggle=popover]")
+      .popover()
+      .click(function(e) {
+        e.preventDefault()
+      })
+
+    // button state demo
+    $('#fat-btn')
+      .click(function () {
+        var btn = $(this)
+        btn.button('loading')
+        setTimeout(function () {
+          btn.button('reset')
+        }, 3000)
+      })
+
+    // carousel demo
+    $('#myCarousel').carousel()
+
+    // javascript build logic
+    var inputsComponent = $("#components.download input")
+      , inputsPlugin = $("#plugins.download input")
+      , inputsVariables = $("#variables.download input")
+
+    // toggle all plugin checkboxes
+    $('#components.download .toggle-all').on('click', function (e) {
+      e.preventDefault()
+      inputsComponent.attr('checked', !inputsComponent.is(':checked'))
+    })
+
+    $('#plugins.download .toggle-all').on('click', function (e) {
+      e.preventDefault()
+      inputsPlugin.attr('checked', !inputsPlugin.is(':checked'))
+    })
+
+    $('#variables.download .toggle-all').on('click', function (e) {
+      e.preventDefault()
+      inputsVariables.val('')
+    })
+
+    // request built javascript
+    $('.download-btn .btn').on('click', function () {
+
+      var css = $("#components.download input:checked")
+            .map(function () { return this.value })
+            .toArray()
+        , js = $("#plugins.download input:checked")
+            .map(function () { return this.value })
+            .toArray()
+        , vars = {}
+        , img = ['glyphicons-halflings.png', 'glyphicons-halflings-white.png']
+
+    $("#variables.download input")
+      .each(function () {
+        $(this).val() && (vars[ $(this).prev().text() ] = $(this).val())
+      })
+
+      $.ajax({
+        type: 'POST'
+      , url: /\?dev/.test(window.location) ? 'http://localhost:3000' : 'http://bootstrap.herokuapp.com'
+      , dataType: 'jsonpi'
+      , params: {
+          js: js
+        , css: css
+        , vars: vars
+        , img: img
+      }
+      })
+    })
+  })
+
+// Modified from the original jsonpi https://github.com/benvinegar/jquery-jsonpi
+$.ajaxTransport('jsonpi', function(opts, originalOptions, jqXHR) {
+  var url = opts.url;
+
+  return {
+    send: function(_, completeCallback) {
+      var name = 'jQuery_iframe_' + jQuery.now()
+        , iframe, form
+
+      iframe = $('<iframe>')
+        .attr('name', name)
+        .appendTo('head')
+
+      form = $('<form>')
+        .attr('method', opts.type) // GET or POST
+        .attr('action', url)
+        .attr('target', name)
+
+      $.each(opts.params, function(k, v) {
+
+        $('<input>')
+          .attr('type', 'hidden')
+          .attr('name', k)
+          .attr('value', typeof v == 'string' ? v : JSON.stringify(v))
+          .appendTo(form)
+      })
+
+      form.appendTo('body').submit()
+    }
+  }
+})
+
+}(window.jQuery)
+
+
 //Mobile jPanel Nav Menu
 
 jQuery(document).ready(function($){
@@ -518,4 +826,5 @@ jQuery(document).ready(function($){
 	
 	jPM.on();
 });
+
 
