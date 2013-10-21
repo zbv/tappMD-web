@@ -44,7 +44,60 @@ get_header();
 <?php if( csc_option('csc_sidebar_pos_cat') == 'left_right' ):?>
 
 <div class="span3">
+<?php
+//Check to see if author has role author
+if (is_singular()) {
+    $author_id = get_queried_object()->post_author;
+    }
+    
+    $userlevel = get_the_author_meta('user_level');
+	if ($userlevel== 2) { ?>
+<div class="row">
+<div class="span3">
+<aside id="csc_recentpost_widget-2" class="widget csc-recent-posts">
+	<div class="widget-title">
+		<h3>Prescribed By</h3>
+	</div>
+		<ul class="w-recentpost expert_sidebar">
 
+<?php
+  
+    $blogauthornice = get_the_author_meta('user_nicename');
+	$blogauthorname = get_the_author_meta('nickname');
+	$blogauthorid = get_the_author_meta('ID');
+	echo '<li class="expert_sidebar bl-bg">';
+	echo '<header class="entry-header"><h2 class="post-title-small"><a href="/profile/'. $blogauthornice . '" title="'. $blogauthorname .'">'. $blogauthorname .'</a></h2></header>';
+	echo '<a href="/profile/'. $blogauthornice . '">'. get_avatar (get_the_author_meta('ID'), 120) .'</a>';
+	global $post;
+	$category = get_the_category($post->ID); 
+	 $args=array(
+		  'category__in' => wp_get_post_categories($post->ID),
+		  'post__not_in' => array($post->ID),
+	      'author' => $blogauthorid,
+	      'post_type' => 'post',
+	      'post_status' => 'publish',
+	      'posts_per_page' => 2,
+	      'orberby' => 'rand',
+	      'caller_get_posts'=> 1
+	    );
+	    $my_query = null;
+	    $my_query = new WP_Query($args);
+	    if( $my_query->have_posts() ) {
+	      //echo List of Posts
+	      while ($my_query->have_posts()) : $my_query->the_post(); ?>
+	        <p><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+	        <?php endwhile;
+	    }
+ 	echo '</li>'; ?>
+
+</ul>
+</aside>
+</div>
+</div>
+
+<?php wp_reset_query(); 
+
+	}?>
 <div class="row">
 <div class="span3">
 <?php 
