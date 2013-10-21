@@ -29,7 +29,7 @@ get_header();
 <div class="span12">
 <header id="pagehead">
 <?php the_post(); ?>
-<h1><?php printf( __( 'Expert Profile : %s', 'csc-themewp' ), get_the_author(). '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+<h1><strong><?php printf( get_the_author()); ?></strong> Expert Profile</h1>
 
 <?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
 <?php rewind_posts(); ?>
