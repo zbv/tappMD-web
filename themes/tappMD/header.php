@@ -66,6 +66,15 @@ echo " | $site_description";
 <![endif]-->
 <?php wp_head();?>
 
+<?php  
+include CSC_BASE. 'css/typo-css.php'; 
+if ( csc_option('auto_stylesheet') ) {
+		wp_register_style( 'color_stylesheet', csc_option('auto_stylesheet'), array(), false, false, 'all' );
+		wp_enqueue_style( 'color_stylesheet');
+    }
+?>
+<?php csc_include( 'cat_set' );?>
+
 <?php if (csc_option('csc_sharethis')) {?>
 <!--Include ShareThis-->
 <script type="text/javascript">var switchTo5x=true;</script>
@@ -109,14 +118,7 @@ echo " | $site_description";
 
 <body <?php body_class();?>>
         
-<?php  
-include CSC_BASE. 'css/typo-css.php'; 
-if ( csc_option('auto_stylesheet') ) {
-		wp_register_style( 'color_stylesheet', csc_option('auto_stylesheet'), array(), false, false, 'all' );
-		wp_enqueue_style( 'color_stylesheet');
-    }
-?>
-<?php csc_include( 'cat_set' );?>
+
  <div class="top-bar">
  <div class="container" style="position:relative;">
         
