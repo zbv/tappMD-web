@@ -28,7 +28,7 @@ get_header();
 <div class="span12">
 <header id="pagehead">
 
-<h1 class="page-title">Category Archives : <?php $current_category = single_cat_title("", false);  echo $current_category; ?></h1>
+<h1 class="page-title"><?php $current_category = single_cat_title("", false);  echo $current_category; ?> Resource Center</h1>
 
 
 </header>
