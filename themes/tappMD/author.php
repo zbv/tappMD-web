@@ -322,8 +322,8 @@ dynamic_sidebar("Author Side Bar 1");
           <div class="widget-title"><h3><?php echo $category->name.' '.$category->description; ?></h3></div> 
           
          <?php $category_id = $category->ID; ?>      
-          	<a class="rss_cat" href="<?php CSC_BASE_URL ?>?feed=rss2&cat=<?php echo $category_id;?>"></a>
-           	<a class="all_cat" href="<?php echo get_category_link( $category->ID ); ?>" title="View all posts filed under <?php echo $category->name ?>"></a>
+          	<a class="rss_cat" href="<?php CSC_BASE_URL ?>?feed=rss2&cat=<?php echo $category_id;?>&author=<?php echo $curauth->ID;?>"></a>
+           	<a class="all_cat" href="<?php CSC_BASE_URL ?>?&cat=<?php echo $category_id;?>&author=<?php echo $curauth->ID;?>" title="View all posts by <?php echo $curauth->display_name; ?> in <?php echo $category->name; ?>"></a>
     
 	    
 		</div>
