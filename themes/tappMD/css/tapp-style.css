@@ -1172,6 +1172,7 @@ footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer secti
 
 .Teamer .teamer_member_tag p {
     font-weight: 400;
+    line-height: 12px;
     font-size:10px; 
     text-transform:uppercase;
     width:100%;
