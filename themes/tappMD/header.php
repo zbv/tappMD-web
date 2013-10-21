@@ -75,30 +75,6 @@ if ( csc_option('auto_stylesheet') ) {
 ?>
 <?php csc_include( 'cat_set' );?>
 
-<?php if (csc_option('csc_sharethis')) {?>
-<!--Include ShareThis-->
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<?php if ( wp_is_mobile() ) { 
-	/*Show Add To Home if Mobile */
-	/* Don't Show ShareThis On mobile */
-	?>
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/add2home.css">
-		<script src="<?php echo get_template_directory_uri(); ?>/js/add2home.js"></script> 
-
-<?php } else { ?>
-<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
-<?php } ?>
-
-<script type="text/javascript">stLight.options({publisher: "<?php echo csc_option('csc_sharethis')?>", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-<script type="text/javascript">
-	stLight.options({
-		publisher:'<?php echo csc_option('csc_sharethis'); ?>',
-                headerTitle:'<?php bloginfo( 'name' ); ?>'
-	});
-</script>
-
-<?php } ?>
 
  <?php if ( csc_option('csc_ga_code') ) {?>
 <script type="text/javascript">

@@ -101,8 +101,32 @@
 <?php  } ?>
 
  <?php wp_footer(); ?>
+
+ 
  
 <?php if (csc_option('csc_sharethis')) {?>
+	<!--Include ShareThis-->
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" async src="http://w.sharethis.com/button/buttons.js"></script>
+<?php if ( wp_is_mobile() ) { 
+	/*Show Add To Home if Mobile */
+	/* Don't Show ShareThis On mobile */
+	?>
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/add2home.css">
+		<script src="<?php echo get_template_directory_uri(); ?>/js/add2home.js"></script> 
+
+<?php } else { ?>
+<script type="text/javascript" async src="http://s.sharethis.com/loader.js"></script>
+<?php } ?>
+
+<script type="text/javascript">stLight.options({publisher: "<?php echo csc_option('csc_sharethis')?>", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+<script type="text/javascript">
+	stLight.options({
+		publisher:'<?php echo csc_option('csc_sharethis'); ?>',
+                headerTitle:'<?php bloginfo( 'name' ); ?>'
+	});
+</script>
+
 <script type="text/javascript">stLight.options({publisher: "<?php echo csc_option('csc_sharethis') ?>", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 <script>
 var options={ "publisher": "<?php echo csc_option('csc_sharethis') ?>", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["twitter", "facebook", "pinterest", "linkedin", "googleplus", "email"]}};
