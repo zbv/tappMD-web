@@ -32,11 +32,11 @@ jQuery("#disqus_thread").addClass("span6");
 
 <?php $thumb = get_post_thumbnail_id();?>
 <?php $image = wp_get_attachment_url($thumb, 'full'); ?>
-<?php $thumb = aq_resize($image, 630, $image_size_single_post , true, true); ?>
+<?php $thumb = aq_resize($image, 630, auto, true, true); ?>
 
                 <div class="row">
                  <div class="span6 post-img">
-                  <a href="<?php echo $image ; ?>" rel="prettyPhoto" title="<?php the_title_attribute(); ?>" >
+                  <a href="<?php the_permalink(); ?>" rel="prettyPhoto" title="<?php the_title_attribute(); ?>" >
                     <img src="<?php echo $thumb; ?>" />
                     
                   </a>                 
