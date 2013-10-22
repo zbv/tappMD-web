@@ -58,13 +58,14 @@ echo " | $site_description";
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<?php wp_enqueue_script( 'jquery' ); ?>
 <?php include CSC_BASE . 'typo.php'; ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <!--[if IE 8]> 
 <link href="<?php echo get_template_directory_uri(); ?>/css/ie8.css" rel= "stylesheet" media= "all" /> 
 <![endif]-->
 <?php wp_head();?>
+<?php wp_enqueue_script( 'jquery' ); ?>
+
 
 <?php  
 include CSC_BASE. 'css/typo-css.php'; 
