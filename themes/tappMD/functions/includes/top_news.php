@@ -68,7 +68,6 @@
 			
 			<?php while( $hotnews_query->have_posts() ) : $hotnews_query->the_post();	$count++;?>
             
-             
 				<div class="span3 hot_top_news" style=" padding-top:10px; padding-bottom:10px;margin-top:30px; <?php if (csc_option('csc_scroll_hotnews')):?> margin-left:0; margin-right:30px;display:none<?php  endif;?>">
                 
                 <?php if (!csc_option('csc_hotnews_style')):?>
@@ -79,7 +78,7 @@
 				        <?php $image = wp_get_attachment_url($thumb, 'full'); ?>
                         <?php $images = aq_resize($image, 70, 70 , true, true);?>
 						
-						<div style="margin-right:10px; float:left;margin-left:5px;">
+						<div class="top_news_title_small">
 
 				          <a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>' ><img src="<?php echo $images; ?>" alt="<?php the_title(); ?>" /></a>
                           
@@ -96,7 +95,7 @@
 				        <?php $image = wp_get_attachment_url($thumb, 'full'); ?>
                         <?php $images = aq_resize($image, 300, 110 , true, true);?>
 						
-						<div style="float:left; margin-bottom:15px;">
+						<div class="top_news_title_big">
 
 				          <a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>' ><img src="<?php echo $images; ?>" alt="<?php the_title(); ?>" /></a>
                           
@@ -105,7 +104,7 @@
                 
                 <?php endif;?>
 
-                <h3 class="post-title-small" style="margin-left:10px"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h3>
+                <h3 class="post-title-small top_news_title"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h3>
                                 
 					<h3 class="challenge-title"><a href='<?php the_permalink(); ?>' title='Take The Challenge <?php the_title(); ?>'><i class="icon-trophy"></i> Take The Challenge </a></h3>
 				

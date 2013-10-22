@@ -289,7 +289,7 @@ dynamic_sidebar("Author Side Bar 1");
 
     <div class="span6 divider-strip author">
             
-    <h3 itemprop="author">Resource Centers Prescribed By <span><?php echo $curauth->display_name; ?></span></h3>
+    <h3 itemprop="author"><a href="http://en.wikipedia.org/wiki/Electronic_health_record" title="More about EHR - Electronic Health Records" target="_blank">EHR</a> Resource Centers Prescribed By <span><?php echo $curauth->display_name; ?></span></h3>
     </div>
     
     <!--Begin DIV ID Resource Centers-->
