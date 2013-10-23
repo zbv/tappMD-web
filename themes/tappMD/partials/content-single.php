@@ -187,6 +187,8 @@ the_content();
                             
                             <?php } ?>
 
+<p><small><em>Please contact content@tappnetwork.com with any DMCA or other intellectual property concerns.</em></small></p>
+
 </div><!-- .entry-content -->
 
 </div>
