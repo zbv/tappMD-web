@@ -152,7 +152,10 @@ class csc_1_Magazine_bignews_Widget extends WP_Widget {
                 </header>
                    
                    <div class="author_bignews" style="float: left;">
-                   						 <?php echo userphoto_the_author_photo(); ?>
+                   	
+									<?php $author_photo = userphoto_the_author_photo();
+									$author_image = aq_resize($author_photo, 50, 50, true, true); //resize & retain image proportions (soft crop)
+                                    echo $author_image; ?>
 
                    </div>
                    <?php csc_post_info();?>
