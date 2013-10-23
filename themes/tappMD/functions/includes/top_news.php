@@ -80,7 +80,7 @@
 						
 						<div class="top_news_title_small">
 
-				          <a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>' ><img src="<?php echo $images; ?>" alt="<?php the_title(); ?>" /></a>
+				          <a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>' ><img src="<?php echo $images; ?>" alt="<?php the_title(); ?>" width="70px" height="70px" /></a>
                           
                        </div>
 				<?php endif;?>
