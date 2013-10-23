@@ -101,7 +101,7 @@ class csc_tabs_widget extends WP_Widget {
 					
 					<li style="margin-bottom:10px; padding-bottom:5px;" class=" bl-bg">
 					<?php if(has_post_thumbnail()):?>
-					<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>"><img alt="<?php the_title(); ?>"  class="imageLeft" src="<?php echo $images ?>" style="padding-left:5px;"/></a>
+					<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>"><img src="<?php echo $images ?>" alt="<?php the_title(); ?>"  class="imageLeft" width="90px" height="90px" style="padding-left:5px;"/></a>
 					<?php endif; ?>
 					<header class="entry-header"><h2 class="post-title-small"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h2></header>
                      <?php csc_post_info();?>					
@@ -141,7 +141,7 @@ class csc_tabs_widget extends WP_Widget {
 					
 					<li style="margin-bottom:10px; padding-bottom:5px;" class=" bl-bg">
 					<?php if(has_post_thumbnail()):?>
-					<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>"><img alt="<?php the_title(); ?>"  class="imageLeft" src="<?php echo $images ?>" style="padding-left:5px;"/></a>
+					<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>"><img src="<?php echo $images ?>" alt="<?php the_title(); ?>" class="imageLeft" width="90px" height="90px" style="padding-left:5px;"/></a>
 					<?php endif; ?>
 					<header class="entry-header"><h2 class="post-title-small"><a href='<?php the_permalink(); ?>' title='<?php the_title(); ?>'><?php the_title(); ?></a></h2></header>
                      <?php csc_post_info();?>
