@@ -141,10 +141,12 @@ class csc_1_Magazine_bignews_Widget extends WP_Widget {
 				 <?php } ?>
 
                <?php if(has_post_thumbnail()):?>
-
-                
-               		<a href="<?php echo get_permalink() ?>" class="imageLeft" title="<?php the_title(); ?>"><img alt="<?php the_title(); ?>"  src="<?php echo $images ?>" /></a>
+					<?php if ( wp_is_mobile() ) { ?>
+                    	<a href="<?php echo get_permalink() ?>" class="imageLeft" title="<?php the_title(); ?>"><img alt="<?php the_title(); ?>"  src="<?php echo $images ?>" width="320px" height="200px" /></a>
+					<?php } else { ?>
+               			<a href="<?php echo get_permalink() ?>" class="imageLeft" title="<?php the_title(); ?>"><img alt="<?php the_title(); ?>"  src="<?php echo $images ?>" width="200px" height="130px" /></a>
                     
+                    <?php } ?>
 			   <?php endif; ?> 
                   
 				<header class="entry-header">
