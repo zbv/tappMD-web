@@ -94,6 +94,8 @@ $wp_rewrite->flush_rules() ;
 }
 add_action( 'init', 'my_custom_author_base', 0 ) ; 
 
+//Default Image Link to NONE
+update_option('image_default_link_type','none');
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
