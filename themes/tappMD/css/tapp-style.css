@@ -1206,3 +1206,6 @@ footer, .Teamer header, .Teamer hgroup, .Teamer menu, .Teamer nav, .Teamer secti
 .top_news_title {margin-left:10px; height:36px; overflow:hidden;}
 .top_news_title_small {margin-right:10px; float:left; margin-left:5px;}
 .top_news_title_big {float:left; margin-bottom:15px;}
+
+/*bottom disclaimer*/
+.bottom-disclaimer{text-align:center;}

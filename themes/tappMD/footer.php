@@ -45,7 +45,9 @@
 
     <div class="row">
     
-    <div class="span6 copy"><div style="margin-left:10px;">
+    <div class="span6 copy">
+    	
+    	<div style="margin-left:10px;">
 	<?php if (csc_option('csc_copyright')) {
 			echo csc_option('csc_copyright'); 
 		} else {
@@ -83,6 +85,9 @@
 <?php wp_nav_menu( $defaults ); ?>
      </div>
      
+     <div class="span12 bottom-disclaimer">
+     	<small>The material in this site is intended to be of general informational use and is not intended to constitute medical advice, probable diagnosis, or recommended treatments.</small>
+     </div>
   </div>
   
 </div>
